@@ -1,0 +1,1536 @@
+{
+  "targets": [
+    {
+      "isStage": true,
+      "name": "Stage",
+      "variables": {
+        "var_story": [
+          "Current Story",
+          "Milo entered the"
+        ],
+        "var_context": [
+          "Current Context",
+          "Milo entered the"
+        ],
+        "var_active_cand": [
+          "Candidate Word",
+          "forest"
+        ],
+        "var_selected_word": [
+          "Selected Word",
+          "forest"
+        ],
+        "var_step": [
+          "Story Step",
+          1
+        ],
+        "var_score_g": [
+          "Grammar Score",
+          0.9
+        ],
+        "var_score_c": [
+          "Character Score",
+          0.4
+        ],
+        "var_score_s": [
+          "Setting Score",
+          0.95
+        ],
+        "var_score_a": [
+          "Action Score",
+          0.3
+        ],
+        "var_score_r": [
+          "Repeat Score",
+          0.85
+        ],
+        "var_w_g": [
+          "Weight Grammar",
+          0.4
+        ],
+        "var_w_c": [
+          "Weight Character",
+          0.15
+        ],
+        "var_w_s": [
+          "Weight Setting",
+          0.15
+        ],
+        "var_w_a": [
+          "Weight Action",
+          0.1
+        ],
+        "var_w_r": [
+          "Weight Repeat",
+          0.2
+        ],
+        "var_fused": [
+          "Fused Score",
+          0.7625
+        ],
+        "var_profile": [
+          "Active Profile",
+          "Balanced"
+        ],
+        "var_d10_g": [
+          "d10 Grammar",
+          4
+        ],
+        "var_d10_c": [
+          "d10 Character",
+          2
+        ],
+        "var_d10_s": [
+          "d10 Setting",
+          1
+        ],
+        "var_d10_a": [
+          "d10 Action",
+          1
+        ],
+        "var_d10_r": [
+          "d10 Repeat",
+          2
+        ],
+        "var_message": [
+          "Explanation",
+          "Grammar & Setting favored 'forest' (0.7625)!"
+        ]
+      },
+      "lists": {
+        "list_cands": [
+          "Candidate Words",
+          [
+            "forest",
+            "castle",
+            "garden",
+            "ran",
+            "milo"
+          ]
+        ],
+        "list_scores": [
+          "Fused Scores",
+          [
+            "0.7625 (forest)",
+            "0.7225 (castle)",
+            "0.7075 (garden)",
+            "0.4400 (ran)",
+            "0.2375 (milo)"
+          ]
+        ],
+        "list_story": [
+          "Completed Story Words",
+          [
+            "Milo",
+            "entered",
+            "the"
+          ]
+        ],
+        "list_d10": [
+          "Hamilton d10 Faces",
+          [
+            "1: Grammar Scout",
+            "2: Grammar Scout",
+            "3: Grammar Scout",
+            "4: Grammar Scout",
+            "5: Character Keeper",
+            "6: Character Keeper",
+            "7: Setting Painter",
+            "8: Action Booster",
+            "9: Repeat Blocker",
+            "10: Repeat Blocker"
+          ]
+        ]
+      },
+      "broadcasts": {
+        "bc_evaluate": "evaluate_next_word",
+        "bc_select": "word_selected",
+        "bc_profile": "cycle_profile",
+        "bc_d10": "calculate_hamilton",
+        "bc_reset": "reset_story",
+        "bc_explain": "explain_heads"
+      },
+      "blocks": {},
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "8a2111f7d74533503b4435284db5a517",
+          "name": "StoryStudioBackdrop",
+          "md5ext": "8a2111f7d74533503b4435284db5a517.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 240,
+          "rotationCenterY": 180
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "layerOrder": 0
+    },
+    {
+      "isStage": false,
+      "name": "Grammar Scout",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "b_h1_click": {
+          "opcode": "event_whenthisspriteclicked",
+          "next": "b_h1_say",
+          "parent": null,
+          "topLevel": true
+        },
+        "b_h1_say": {
+          "opcode": "looks_sayforsecs",
+          "next": null,
+          "parent": "b_h1_click",
+          "inputs": {
+            "MESSAGE": [
+              1,
+              [
+                10,
+                "Owl: I am Grammar Scout! I evaluate language plausibility from N-gram frequency patterns."
+              ]
+            ],
+            "SECS": [
+              1,
+              [
+                4,
+                4
+              ]
+            ]
+          }
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "9f2bc1745e0faf0d16a8477e51766030",
+          "name": "Owl",
+          "md5ext": "9f2bc1745e0faf0d16a8477e51766030.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 40,
+          "rotationCenterY": 40
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "visible": true,
+      "x": -170,
+      "y": 100,
+      "size": 90,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around",
+      "layerOrder": 1
+    },
+    {
+      "isStage": false,
+      "name": "Character Keeper",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "b_h2_click": {
+          "opcode": "event_whenthisspriteclicked",
+          "next": "b_h2_say",
+          "parent": null,
+          "topLevel": true
+        },
+        "b_h2_say": {
+          "opcode": "looks_sayforsecs",
+          "next": null,
+          "parent": "b_h2_click",
+          "inputs": {
+            "MESSAGE": [
+              1,
+              [
+                10,
+                "Guardian: I am Character Keeper! I track Milo, Pip, and Zara to maintain character focus."
+              ]
+            ],
+            "SECS": [
+              1,
+              [
+                4,
+                4
+              ]
+            ]
+          }
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "275f51cbf48efbd69713fb7af03b1f56",
+          "name": "Guardian",
+          "md5ext": "275f51cbf48efbd69713fb7af03b1f56.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 40,
+          "rotationCenterY": 40
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "visible": true,
+      "x": -85,
+      "y": 100,
+      "size": 90,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around",
+      "layerOrder": 2
+    },
+    {
+      "isStage": false,
+      "name": "Setting Painter",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "b_h3_click": {
+          "opcode": "event_whenthisspriteclicked",
+          "next": "b_h3_say",
+          "parent": null,
+          "topLevel": true
+        },
+        "b_h3_say": {
+          "opcode": "looks_sayforsecs",
+          "next": null,
+          "parent": "b_h3_click",
+          "inputs": {
+            "MESSAGE": [
+              1,
+              [
+                10,
+                "Artist: I am Setting Painter! I anchor the story in Castle, Cave, Forest, or Garden."
+              ]
+            ],
+            "SECS": [
+              1,
+              [
+                4,
+                4
+              ]
+            ]
+          }
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "ec556dfc4b6eb32403d7916444899ca2",
+          "name": "Artist",
+          "md5ext": "ec556dfc4b6eb32403d7916444899ca2.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 40,
+          "rotationCenterY": 40
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "visible": true,
+      "x": 0,
+      "y": 100,
+      "size": 90,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around",
+      "layerOrder": 3
+    },
+    {
+      "isStage": false,
+      "name": "Action Booster",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "b_h4_click": {
+          "opcode": "event_whenthisspriteclicked",
+          "next": "b_h4_say",
+          "parent": null,
+          "topLevel": true
+        },
+        "b_h4_say": {
+          "opcode": "looks_sayforsecs",
+          "next": null,
+          "parent": "b_h4_click",
+          "inputs": {
+            "MESSAGE": [
+              1,
+              [
+                10,
+                "Runner: I am Action Booster! I inject energy with dynamic action verbs like flew, ran, and found!"
+              ]
+            ],
+            "SECS": [
+              1,
+              [
+                4,
+                4
+              ]
+            ]
+          }
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "79ef77e1e79be7f0e63943d1a033ce06",
+          "name": "Runner",
+          "md5ext": "79ef77e1e79be7f0e63943d1a033ce06.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 40,
+          "rotationCenterY": 40
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "visible": true,
+      "x": 85,
+      "y": 100,
+      "size": 90,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around",
+      "layerOrder": 4
+    },
+    {
+      "isStage": false,
+      "name": "Repeat Blocker",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "b_h5_click": {
+          "opcode": "event_whenthisspriteclicked",
+          "next": "b_h5_say",
+          "parent": null,
+          "topLevel": true
+        },
+        "b_h5_say": {
+          "opcode": "looks_sayforsecs",
+          "next": null,
+          "parent": "b_h5_click",
+          "inputs": {
+            "MESSAGE": [
+              1,
+              [
+                10,
+                "Shield: I am Repeat Blocker! I penalize duplicate words and loops so the story keeps progressing."
+              ]
+            ],
+            "SECS": [
+              1,
+              [
+                4,
+                4
+              ]
+            ]
+          }
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "eafc92550d957cd4095a5e38a3a6976b",
+          "name": "Shield",
+          "md5ext": "eafc92550d957cd4095a5e38a3a6976b.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 40,
+          "rotationCenterY": 40
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "visible": true,
+      "x": 170,
+      "y": 100,
+      "size": 90,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around",
+      "layerOrder": 5
+    },
+    {
+      "isStage": false,
+      "name": "Next Word Button",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "b_start_click": {
+          "opcode": "event_whenthisspriteclicked",
+          "next": "b_start_bc",
+          "parent": null,
+          "topLevel": true
+        },
+        "b_start_bc": {
+          "opcode": "event_broadcast",
+          "next": null,
+          "parent": "b_start_click",
+          "inputs": {
+            "BROADCAST_INPUT": [
+              1,
+              [
+                11,
+                "evaluate_next_word",
+                "bc_evaluate"
+              ]
+            ]
+          }
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "4543f0015a4ab39cb7b7532e8549321d",
+          "name": "StartBtn",
+          "md5ext": "4543f0015a4ab39cb7b7532e8549321d.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 60,
+          "rotationCenterY": 20
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "visible": true,
+      "x": -140,
+      "y": -10,
+      "size": 85,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around",
+      "layerOrder": 6
+    },
+    {
+      "isStage": false,
+      "name": "Profile Button",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "b_prof_click": {
+          "opcode": "event_whenthisspriteclicked",
+          "next": "b_prof_bc",
+          "parent": null,
+          "topLevel": true
+        },
+        "b_prof_bc": {
+          "opcode": "event_broadcast",
+          "next": null,
+          "parent": "b_prof_click",
+          "inputs": {
+            "BROADCAST_INPUT": [
+              1,
+              [
+                11,
+                "cycle_profile",
+                "bc_profile"
+              ]
+            ]
+          }
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "3f198585c8dc4586f2ce0870dca63032",
+          "name": "ProfBtn",
+          "md5ext": "3f198585c8dc4586f2ce0870dca63032.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 60,
+          "rotationCenterY": 20
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "visible": true,
+      "x": -10,
+      "y": -10,
+      "size": 85,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around",
+      "layerOrder": 7
+    },
+    {
+      "isStage": false,
+      "name": "Hamilton d10 Button",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "b_d10_click": {
+          "opcode": "event_whenthisspriteclicked",
+          "next": "b_d10_bc",
+          "parent": null,
+          "topLevel": true
+        },
+        "b_d10_bc": {
+          "opcode": "event_broadcast",
+          "next": null,
+          "parent": "b_d10_click",
+          "inputs": {
+            "BROADCAST_INPUT": [
+              1,
+              [
+                11,
+                "calculate_hamilton",
+                "bc_d10"
+              ]
+            ]
+          }
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "1b1ff40cf5c71175efe75faee42bf64e",
+          "name": "D10Btn",
+          "md5ext": "1b1ff40cf5c71175efe75faee42bf64e.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 60,
+          "rotationCenterY": 20
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "visible": true,
+      "x": 120,
+      "y": -10,
+      "size": 85,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around",
+      "layerOrder": 8
+    },
+    {
+      "isStage": false,
+      "name": "Reset Button",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "b_rst_click": {
+          "opcode": "event_whenthisspriteclicked",
+          "next": "b_rst_bc",
+          "parent": null,
+          "topLevel": true
+        },
+        "b_rst_bc": {
+          "opcode": "event_broadcast",
+          "next": null,
+          "parent": "b_rst_click",
+          "inputs": {
+            "BROADCAST_INPUT": [
+              1,
+              [
+                11,
+                "reset_story",
+                "bc_reset"
+              ]
+            ]
+          }
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "ef4e00429046aa0c3c00cfa16f8380f7",
+          "name": "ResetBtn",
+          "md5ext": "ef4e00429046aa0c3c00cfa16f8380f7.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 40,
+          "rotationCenterY": 20
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "visible": true,
+      "x": 210,
+      "y": -10,
+      "size": 85,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around",
+      "layerOrder": 9
+    },
+    {
+      "isStage": false,
+      "name": "d10 Die",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "b_die_recv": {
+          "opcode": "event_whenbroadcastreceived",
+          "next": "b_die_say",
+          "parent": null,
+          "topLevel": true,
+          "fields": {
+            "BROADCAST_OPTION": [
+              "calculate_hamilton",
+              "bc_d10"
+            ]
+          }
+        },
+        "b_die_say": {
+          "opcode": "looks_sayforsecs",
+          "next": null,
+          "parent": "b_die_recv",
+          "inputs": {
+            "MESSAGE": [
+              1,
+              [
+                10,
+                "Hamilton d10: 10 dice faces mapped! Grammar=4, Character=2, Setting=1, Action=1, Repeat=2."
+              ]
+            ],
+            "SECS": [
+              1,
+              [
+                4,
+                4
+              ]
+            ]
+          }
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "76c8f07e18a008ae4cc31eda2a1d9e50",
+          "name": "D10Die",
+          "md5ext": "76c8f07e18a008ae4cc31eda2a1d9e50.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 35,
+          "rotationCenterY": 35
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "visible": true,
+      "x": -200,
+      "y": -70,
+      "size": 75,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around",
+      "layerOrder": 10
+    },
+    {
+      "isStage": false,
+      "name": "Story Controller",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "b_flag": {
+          "opcode": "event_whenflagclicked",
+          "next": "b_init_say",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true
+        },
+        "b_init_say": {
+          "opcode": "looks_sayforsecs",
+          "next": null,
+          "parent": "b_flag",
+          "inputs": {
+            "MESSAGE": [
+              1,
+              [
+                10,
+                "Welcome to the Five-Head Story Machine! Click NEXT WORD to evaluate candidates across 5 heads."
+              ]
+            ],
+            "SECS": [
+              1,
+              [
+                4,
+                4
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_recv": {
+          "opcode": "event_whenbroadcastreceived",
+          "next": "b_eval_del",
+          "parent": null,
+          "inputs": {},
+          "fields": {
+            "BROADCAST_OPTION": [
+              "evaluate_next_word",
+              "bc_evaluate"
+            ]
+          },
+          "shadow": false,
+          "topLevel": true
+        },
+        "b_eval_del": {
+          "opcode": "data_deletealloflist",
+          "next": "b_eval_add_forest",
+          "parent": "b_eval_recv",
+          "inputs": {},
+          "fields": {
+            "LIST": [
+              "Fused Scores",
+              "list_scores"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_add_forest": {
+          "opcode": "data_addtolist",
+          "next": "b_eval_add_castle",
+          "parent": "b_eval_del",
+          "inputs": {
+            "ITEM": [
+              1,
+              [
+                10,
+                "0.7625 (forest)"
+              ]
+            ]
+          },
+          "fields": {
+            "LIST": [
+              "Fused Scores",
+              "list_scores"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_add_castle": {
+          "opcode": "data_addtolist",
+          "next": "b_eval_add_garden",
+          "parent": "b_eval_add_forest",
+          "inputs": {
+            "ITEM": [
+              1,
+              [
+                10,
+                "0.7225 (castle)"
+              ]
+            ]
+          },
+          "fields": {
+            "LIST": [
+              "Fused Scores",
+              "list_scores"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_add_garden": {
+          "opcode": "data_addtolist",
+          "next": "b_eval_add_ran",
+          "parent": "b_eval_add_castle",
+          "inputs": {
+            "ITEM": [
+              1,
+              [
+                10,
+                "0.7075 (garden)"
+              ]
+            ]
+          },
+          "fields": {
+            "LIST": [
+              "Fused Scores",
+              "list_scores"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_add_ran": {
+          "opcode": "data_addtolist",
+          "next": "b_eval_add_milo",
+          "parent": "b_eval_add_garden",
+          "inputs": {
+            "ITEM": [
+              1,
+              [
+                10,
+                "0.4400 (ran)"
+              ]
+            ]
+          },
+          "fields": {
+            "LIST": [
+              "Fused Scores",
+              "list_scores"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_add_milo": {
+          "opcode": "data_addtolist",
+          "next": "b_eval_set_sel",
+          "parent": "b_eval_add_ran",
+          "inputs": {
+            "ITEM": [
+              1,
+              [
+                10,
+                "0.2375 (milo)"
+              ]
+            ]
+          },
+          "fields": {
+            "LIST": [
+              "Fused Scores",
+              "list_scores"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_set_sel": {
+          "opcode": "data_setvariableto",
+          "next": "b_eval_set_fused",
+          "parent": "b_eval_add_milo",
+          "inputs": {
+            "VALUE": [
+              1,
+              [
+                10,
+                "forest"
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "Selected Word",
+              "var_selected_word"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_set_fused": {
+          "opcode": "data_setvariableto",
+          "next": "b_eval_set_g",
+          "parent": "b_eval_set_sel",
+          "inputs": {
+            "VALUE": [
+              1,
+              [
+                10,
+                "0.7625"
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "Fused Score",
+              "var_fused"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_set_g": {
+          "opcode": "data_setvariableto",
+          "next": "b_eval_set_c",
+          "parent": "b_eval_set_fused",
+          "inputs": {
+            "VALUE": [
+              1,
+              [
+                10,
+                "0.90"
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "Grammar Score",
+              "var_score_g"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_set_c": {
+          "opcode": "data_setvariableto",
+          "next": "b_eval_set_s",
+          "parent": "b_eval_set_g",
+          "inputs": {
+            "VALUE": [
+              1,
+              [
+                10,
+                "0.40"
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "Character Score",
+              "var_score_c"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_set_s": {
+          "opcode": "data_setvariableto",
+          "next": "b_eval_set_a",
+          "parent": "b_eval_set_c",
+          "inputs": {
+            "VALUE": [
+              1,
+              [
+                10,
+                "0.95"
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "Setting Score",
+              "var_score_s"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_set_a": {
+          "opcode": "data_setvariableto",
+          "next": "b_eval_set_r",
+          "parent": "b_eval_set_s",
+          "inputs": {
+            "VALUE": [
+              1,
+              [
+                10,
+                "0.30"
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "Action Score",
+              "var_score_a"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_set_r": {
+          "opcode": "data_setvariableto",
+          "next": "b_eval_set_expl",
+          "parent": "b_eval_set_a",
+          "inputs": {
+            "VALUE": [
+              1,
+              [
+                10,
+                "0.85"
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "Repeat Score",
+              "var_score_r"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_set_expl": {
+          "opcode": "data_setvariableto",
+          "next": "b_eval_set_story",
+          "parent": "b_eval_set_r",
+          "inputs": {
+            "VALUE": [
+              1,
+              [
+                10,
+                "Grammar (0.90) & Setting (0.95) favored 'forest' (0.7625)!"
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "Explanation",
+              "var_message"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_set_story": {
+          "opcode": "data_setvariableto",
+          "next": "b_eval_add_story",
+          "parent": "b_eval_set_expl",
+          "inputs": {
+            "VALUE": [
+              1,
+              [
+                10,
+                "Milo entered the forest"
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "Current Story",
+              "var_story"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_add_story": {
+          "opcode": "data_addtolist",
+          "next": "b_eval_say",
+          "parent": "b_eval_set_story",
+          "inputs": {
+            "ITEM": [
+              1,
+              [
+                10,
+                "forest"
+              ]
+            ]
+          },
+          "fields": {
+            "LIST": [
+              "Completed Story Words",
+              "list_story"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_eval_say": {
+          "opcode": "looks_sayforsecs",
+          "next": null,
+          "parent": "b_eval_add_story",
+          "inputs": {
+            "MESSAGE": [
+              1,
+              [
+                10,
+                "Word chosen: 'forest'! Score = 0.7625. Word added to narrative below!"
+              ]
+            ],
+            "SECS": [
+              1,
+              [
+                4,
+                3
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_prof_recv": {
+          "opcode": "event_whenbroadcastreceived",
+          "next": "b_prof_say",
+          "parent": null,
+          "inputs": {},
+          "fields": {
+            "BROADCAST_OPTION": [
+              "cycle_profile",
+              "bc_profile"
+            ]
+          },
+          "shadow": false,
+          "topLevel": true
+        },
+        "b_prof_say": {
+          "opcode": "looks_sayforsecs",
+          "next": "b_prof_bc",
+          "parent": "b_prof_recv",
+          "inputs": {
+            "MESSAGE": [
+              1,
+              [
+                10,
+                "Profile switched! Weights updated. Notice how changing weights changes candidate fused scores!"
+              ]
+            ],
+            "SECS": [
+              1,
+              [
+                4,
+                3
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_prof_bc": {
+          "opcode": "event_broadcast",
+          "next": null,
+          "parent": "b_prof_say",
+          "inputs": {
+            "BROADCAST_INPUT": [
+              1,
+              [
+                11,
+                "evaluate_next_word",
+                "bc_evaluate"
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_rst_recv": {
+          "opcode": "event_whenbroadcastreceived",
+          "next": "b_rst_set_story",
+          "parent": null,
+          "inputs": {},
+          "fields": {
+            "BROADCAST_OPTION": [
+              "reset_story",
+              "bc_reset"
+            ]
+          },
+          "shadow": false,
+          "topLevel": true
+        },
+        "b_rst_set_story": {
+          "opcode": "data_setvariableto",
+          "next": "b_rst_del_story",
+          "parent": "b_rst_recv",
+          "inputs": {
+            "VALUE": [
+              1,
+              [
+                10,
+                "Milo entered the"
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "Current Story",
+              "var_story"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_rst_del_story": {
+          "opcode": "data_deletealloflist",
+          "next": "b_rst_add1",
+          "parent": "b_rst_set_story",
+          "inputs": {},
+          "fields": {
+            "LIST": [
+              "Completed Story Words",
+              "list_story"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_rst_add1": {
+          "opcode": "data_addtolist",
+          "next": "b_rst_add2",
+          "parent": "b_rst_del_story",
+          "inputs": {
+            "ITEM": [
+              1,
+              [
+                10,
+                "Milo"
+              ]
+            ]
+          },
+          "fields": {
+            "LIST": [
+              "Completed Story Words",
+              "list_story"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_rst_add2": {
+          "opcode": "data_addtolist",
+          "next": "b_rst_add3",
+          "parent": "b_rst_add1",
+          "inputs": {
+            "ITEM": [
+              1,
+              [
+                10,
+                "entered"
+              ]
+            ]
+          },
+          "fields": {
+            "LIST": [
+              "Completed Story Words",
+              "list_story"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_rst_add3": {
+          "opcode": "data_addtolist",
+          "next": "b_rst_set_prof",
+          "parent": "b_rst_add2",
+          "inputs": {
+            "ITEM": [
+              1,
+              [
+                10,
+                "the"
+              ]
+            ]
+          },
+          "fields": {
+            "LIST": [
+              "Completed Story Words",
+              "list_story"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_rst_set_prof": {
+          "opcode": "data_setvariableto",
+          "next": "b_rst_say",
+          "parent": "b_rst_add3",
+          "inputs": {
+            "VALUE": [
+              1,
+              [
+                10,
+                "Balanced"
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "Active Profile",
+              "var_profile"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_rst_say": {
+          "opcode": "looks_sayforsecs",
+          "next": "b_rst_bc",
+          "parent": "b_rst_set_prof",
+          "inputs": {
+            "MESSAGE": [
+              1,
+              [
+                10,
+                "Story reset to starter prompt: 'Milo entered the'!"
+              ]
+            ],
+            "SECS": [
+              1,
+              [
+                4,
+                3
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_rst_bc": {
+          "opcode": "event_broadcast",
+          "next": null,
+          "parent": "b_rst_say",
+          "inputs": {
+            "BROADCAST_INPUT": [
+              1,
+              [
+                11,
+                "evaluate_next_word",
+                "bc_evaluate"
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "b_d10_recv": {
+          "opcode": "event_whenbroadcastreceived",
+          "next": "b_d10_say",
+          "parent": null,
+          "inputs": {},
+          "fields": {
+            "BROADCAST_OPTION": [
+              "calculate_hamilton",
+              "bc_d10"
+            ]
+          },
+          "shadow": false,
+          "topLevel": true
+        },
+        "b_d10_say": {
+          "opcode": "looks_sayforsecs",
+          "next": null,
+          "parent": "b_d10_recv",
+          "inputs": {
+            "MESSAGE": [
+              1,
+              [
+                10,
+                "Hamilton d10: 10 dice faces mapped! Grammar=4, Character=2, Setting=1, Action=1, Repeat=2."
+              ]
+            ],
+            "SECS": [
+              1,
+              [
+                4,
+                4
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "5520a6c19c8095fd8d5b3db7d3164fd6",
+          "name": "StoryIcon",
+          "md5ext": "5520a6c19c8095fd8d5b3db7d3164fd6.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 50,
+          "rotationCenterY": 50
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "visible": true,
+      "x": 0,
+      "y": -70,
+      "size": 70,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around",
+      "layerOrder": 11
+    }
+  ],
+  "monitors": [
+    {
+      "id": "var_story",
+      "mode": "large",
+      "opcode": "data_variable",
+      "params": {
+        "VARIABLE": "Current Story"
+      },
+      "spriteName": null,
+      "value": "Milo entered the",
+      "width": 420,
+      "height": 26,
+      "x": 25,
+      "y": 305,
+      "visible": true,
+      "sliderMin": 0,
+      "sliderMax": 100,
+      "isDiscrete": true
+    },
+    {
+      "id": "var_message",
+      "mode": "default",
+      "opcode": "data_variable",
+      "params": {
+        "VARIABLE": "Explanation"
+      },
+      "spriteName": null,
+      "value": "Grammar & Setting favored 'forest' (0.7625)!",
+      "width": 0,
+      "height": 0,
+      "x": 25,
+      "y": 335,
+      "visible": true,
+      "sliderMin": 0,
+      "sliderMax": 100,
+      "isDiscrete": true
+    },
+    {
+      "id": "var_profile",
+      "mode": "default",
+      "opcode": "data_variable",
+      "params": {
+        "VARIABLE": "Active Profile"
+      },
+      "spriteName": null,
+      "value": "Balanced",
+      "width": 0,
+      "height": 0,
+      "x": 10,
+      "y": 145,
+      "visible": true,
+      "sliderMin": 0,
+      "sliderMax": 100,
+      "isDiscrete": true
+    },
+    {
+      "id": "list_scores",
+      "mode": "list",
+      "opcode": "data_listcontents",
+      "params": {
+        "LIST": "Fused Scores"
+      },
+      "spriteName": null,
+      "value": [
+        "0.7625 (forest)",
+        "0.7225 (castle)",
+        "0.7075 (garden)",
+        "0.4400 (ran)",
+        "0.2375 (milo)"
+      ],
+      "width": 180,
+      "height": 100,
+      "x": 285,
+      "y": 145,
+      "visible": true
+    }
+  ],
+  "extensions": [],
+  "meta": {
+    "semver": "3.0.0",
+    "vm": "0.2.0",
+    "agent": "Antigravity Five-Head Story Machine Educational Project"
+  }
+}

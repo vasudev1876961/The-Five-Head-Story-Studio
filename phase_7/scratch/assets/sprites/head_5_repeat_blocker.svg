@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <!-- Repeat Blocker Shield -->
+  <circle cx="40" cy="40" r="36" fill="#1f2937" stroke="#d29922" stroke-width="3"/>
+  <!-- Shield with Anti-Loop Icon -->
+  <path d="M 40 18 Q 54 22 54 36 Q 54 50 40 56 Q 26 50 26 36 Q 26 22 40 18 Z" fill="#d29922" stroke="#f2cc60" stroke-width="2"/>
+  <!-- Loop crossed out -->
+  <circle cx="40" cy="36" r="9" fill="none" stroke="#0d1117" stroke-width="2.5"/>
+  <line x1="33" y1="43" x2="47" y2="29" stroke="#da3633" stroke-width="3" stroke-linecap="round"/>
+  <!-- Label -->
+  <rect x="8" y="60" width="64" height="15" rx="4" fill="#0d1117" stroke="#d29922" stroke-width="1"/>
+  <text x="40" y="71" font-family="Arial, sans-serif" font-size="7.5" font-weight="bold" fill="#d29922" text-anchor="middle">H5: REPEAT</text>
+</svg>

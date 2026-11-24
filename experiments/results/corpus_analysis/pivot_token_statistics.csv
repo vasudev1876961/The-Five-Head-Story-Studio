@@ -1,0 +1,12 @@
+token,unigram_frequency,outgoing_transitions,unique_continuations
+the,63,63,24
+.,34,0,0
+and,12,12,6
+a,11,11,11
+to,11,11,5
+near,7,7,1
+milo,7,7,7
+pip,7,7,6
+zara,7,7,6
+castle,9,9,6
+cave,7,7,5

@@ -1,0 +1,200 @@
+{
+  "dataset": {
+    "train_sentences": 24,
+    "val_sentences": 5,
+    "test_sentences": 5,
+    "test_events": 58
+  },
+  "predictor": {
+    "model": "TrigramModel",
+    "order": 3,
+    "smoother": "BackoffSmoother"
+  },
+  "benchmarks": [
+    {
+      "strategy": "greedy",
+      "params": {
+        "k": 5,
+        "temperature": 1.0,
+        "seed": 42,
+        "trials": 1
+      },
+      "total_events_evaluated": 58,
+      "total_predictions": 58,
+      "coverage_pct": 100.0,
+      "invalid_distribution_count": 0,
+      "top1_accuracy": 0.2414,
+      "top3_accuracy": 0.431,
+      "top5_accuracy": 0.5,
+      "mean_reciprocal_rank_mrr": 0.3563,
+      "latency_mean_ms": 160.5733,
+      "latency_median_ms": 4.1432,
+      "latency_p95_ms": 538.985
+    },
+    {
+      "strategy": "top_k",
+      "params": {
+        "k": 3,
+        "temperature": 1.0,
+        "seed": 42,
+        "trials": 3
+      },
+      "total_events_evaluated": 58,
+      "total_predictions": 174,
+      "coverage_pct": 100.0,
+      "invalid_distribution_count": 0,
+      "top1_accuracy": 0.2414,
+      "top3_accuracy": 0.431,
+      "top5_accuracy": 0.5,
+      "mean_reciprocal_rank_mrr": 0.3563,
+      "latency_mean_ms": 0.0921,
+      "latency_median_ms": 0.0807,
+      "latency_p95_ms": 0.1926
+    },
+    {
+      "strategy": "top_k",
+      "params": {
+        "k": 5,
+        "temperature": 1.0,
+        "seed": 42,
+        "trials": 3
+      },
+      "total_events_evaluated": 58,
+      "total_predictions": 174,
+      "coverage_pct": 100.0,
+      "invalid_distribution_count": 0,
+      "top1_accuracy": 0.2069,
+      "top3_accuracy": 0.431,
+      "top5_accuracy": 0.5,
+      "mean_reciprocal_rank_mrr": 0.3563,
+      "latency_mean_ms": 0.0899,
+      "latency_median_ms": 0.0867,
+      "latency_p95_ms": 0.11
+    },
+    {
+      "strategy": "top_k",
+      "params": {
+        "k": 10,
+        "temperature": 1.0,
+        "seed": 42,
+        "trials": 3
+      },
+      "total_events_evaluated": 58,
+      "total_predictions": 174,
+      "coverage_pct": 100.0,
+      "invalid_distribution_count": 0,
+      "top1_accuracy": 0.1897,
+      "top3_accuracy": 0.431,
+      "top5_accuracy": 0.5,
+      "mean_reciprocal_rank_mrr": 0.3563,
+      "latency_mean_ms": 0.0904,
+      "latency_median_ms": 0.09,
+      "latency_p95_ms": 0.0985
+    },
+    {
+      "strategy": "temperature",
+      "params": {
+        "k": 5,
+        "temperature": 0.1,
+        "seed": 42,
+        "trials": 3
+      },
+      "total_events_evaluated": 58,
+      "total_predictions": 174,
+      "coverage_pct": 100.0,
+      "invalid_distribution_count": 0,
+      "top1_accuracy": 0.2586,
+      "top3_accuracy": 0.431,
+      "top5_accuracy": 0.5,
+      "mean_reciprocal_rank_mrr": 0.3563,
+      "latency_mean_ms": 0.1267,
+      "latency_median_ms": 0.1209,
+      "latency_p95_ms": 0.1605
+    },
+    {
+      "strategy": "temperature",
+      "params": {
+        "k": 5,
+        "temperature": 0.5,
+        "seed": 42,
+        "trials": 3
+      },
+      "total_events_evaluated": 58,
+      "total_predictions": 174,
+      "coverage_pct": 100.0,
+      "invalid_distribution_count": 0,
+      "top1_accuracy": 0.2069,
+      "top3_accuracy": 0.431,
+      "top5_accuracy": 0.5,
+      "mean_reciprocal_rank_mrr": 0.3563,
+      "latency_mean_ms": 0.1252,
+      "latency_median_ms": 0.1236,
+      "latency_p95_ms": 0.1544
+    },
+    {
+      "strategy": "temperature",
+      "params": {
+        "k": 5,
+        "temperature": 1.0,
+        "seed": 42,
+        "trials": 3
+      },
+      "total_events_evaluated": 58,
+      "total_predictions": 174,
+      "coverage_pct": 100.0,
+      "invalid_distribution_count": 0,
+      "top1_accuracy": 0.1322,
+      "top3_accuracy": 0.431,
+      "top5_accuracy": 0.5,
+      "mean_reciprocal_rank_mrr": 0.3563,
+      "latency_mean_ms": 0.1392,
+      "latency_median_ms": 0.1194,
+      "latency_p95_ms": 0.2264
+    },
+    {
+      "strategy": "temperature",
+      "params": {
+        "k": 5,
+        "temperature": 1.5,
+        "seed": 42,
+        "trials": 3
+      },
+      "total_events_evaluated": 58,
+      "total_predictions": 174,
+      "coverage_pct": 100.0,
+      "invalid_distribution_count": 0,
+      "top1_accuracy": 0.069,
+      "top3_accuracy": 0.431,
+      "top5_accuracy": 0.5,
+      "mean_reciprocal_rank_mrr": 0.3563,
+      "latency_mean_ms": 0.1212,
+      "latency_median_ms": 0.1104,
+      "latency_p95_ms": 0.1718
+    },
+    {
+      "strategy": "temperature",
+      "params": {
+        "k": 5,
+        "temperature": 2.0,
+        "seed": 42,
+        "trials": 3
+      },
+      "total_events_evaluated": 58,
+      "total_predictions": 174,
+      "coverage_pct": 100.0,
+      "invalid_distribution_count": 0,
+      "top1_accuracy": 0.0287,
+      "top3_accuracy": 0.431,
+      "top5_accuracy": 0.5,
+      "mean_reciprocal_rank_mrr": 0.3563,
+      "latency_mean_ms": 0.1484,
+      "latency_median_ms": 0.1411,
+      "latency_p95_ms": 0.2322
+    }
+  ],
+  "reproducibility": {
+    "greedy": true,
+    "top_k_k5": true,
+    "temp_1_0": true
+  }
+}

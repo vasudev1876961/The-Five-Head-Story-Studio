@@ -1,0 +1,1164 @@
+{
+  "corpus_path": "data/raw/story_corpus.txt",
+  "basic_statistics": {
+    "num_sentences": 34,
+    "total_tokens": 415,
+    "word_tokens": 381,
+    "punctuation_tokens": 34,
+    "unique_full_vocabulary": 120,
+    "unique_lexical_vocabulary": 119,
+    "avg_sentence_length": 12.21,
+    "min_sentence_length": 10,
+    "max_sentence_length": 14,
+    "median_sentence_length": 12.0,
+    "sentence_lengths": [
+      10,
+      13,
+      12,
+      13,
+      13,
+      12,
+      14,
+      11,
+      13,
+      12,
+      14,
+      12,
+      11,
+      13,
+      12,
+      13,
+      12,
+      11,
+      13,
+      13,
+      11,
+      12,
+      12,
+      12,
+      12,
+      12,
+      14,
+      12,
+      12,
+      13,
+      12,
+      11,
+      12,
+      11
+    ],
+    "type_token_ratio_full": 0.2892,
+    "type_token_ratio_lexical": 0.3123
+  },
+  "word_frequency_analysis": {
+    "top_20_lexical_words": [
+      {
+        "word": "the",
+        "frequency": 63,
+        "probability": 0.151807
+      },
+      {
+        "word": "and",
+        "frequency": 12,
+        "probability": 0.028916
+      },
+      {
+        "word": "a",
+        "frequency": 11,
+        "probability": 0.026506
+      },
+      {
+        "word": "to",
+        "frequency": 11,
+        "probability": 0.026506
+      },
+      {
+        "word": "castle",
+        "frequency": 9,
+        "probability": 0.021687
+      },
+      {
+        "word": "silver",
+        "frequency": 9,
+        "probability": 0.021687
+      },
+      {
+        "word": "key",
+        "frequency": 8,
+        "probability": 0.019277
+      },
+      {
+        "word": "cave",
+        "frequency": 7,
+        "probability": 0.016867
+      },
+      {
+        "word": "milo",
+        "frequency": 7,
+        "probability": 0.016867
+      },
+      {
+        "word": "near",
+        "frequency": 7,
+        "probability": 0.016867
+      },
+      {
+        "word": "pip",
+        "frequency": 7,
+        "probability": 0.016867
+      },
+      {
+        "word": "zara",
+        "frequency": 7,
+        "probability": 0.016867
+      },
+      {
+        "word": "bright",
+        "frequency": 6,
+        "probability": 0.014458
+      },
+      {
+        "word": "crystal",
+        "frequency": 6,
+        "probability": 0.014458
+      },
+      {
+        "word": "dark",
+        "frequency": 6,
+        "probability": 0.014458
+      },
+      {
+        "word": "garden",
+        "frequency": 6,
+        "probability": 0.014458
+      },
+      {
+        "word": "cat",
+        "frequency": 5,
+        "probability": 0.012048
+      },
+      {
+        "word": "flew",
+        "frequency": 5,
+        "probability": 0.012048
+      },
+      {
+        "word": "forest",
+        "frequency": 5,
+        "probability": 0.012048
+      },
+      {
+        "word": "in",
+        "frequency": 5,
+        "probability": 0.012048
+      }
+    ],
+    "hapax_legomena_count": 57,
+    "hapax_legomena_ratio": 0.479,
+    "hapax_legomena": [
+      "around",
+      "birds",
+      "blew",
+      "book",
+      "creature",
+      "day",
+      "door",
+      "every",
+      "excited",
+      "floor",
+      "flowers",
+      "for",
+      "friendly",
+      "from",
+      "gift",
+      "happily",
+      "held",
+      "helped",
+      "inside",
+      "kingdom",
+      "lake",
+      "made",
+      "map",
+      "morning",
+      "moss",
+      "music",
+      "night",
+      "opened",
+      "padlock",
+      "peaceful",
+      "play",
+      "ran",
+      "read",
+      "running",
+      "sang",
+      "see",
+      "shared",
+      "sky",
+      "smelled",
+      "smiled",
+      "soon",
+      "special",
+      "stars",
+      "sunshine",
+      "swift",
+      "there",
+      "tower",
+      "up",
+      "walls",
+      "wand",
+      "watched",
+      "when",
+      "wind",
+      "wings",
+      "wizard",
+      "woke",
+      "wonderful"
+    ],
+    "min_frequency": 1,
+    "least_frequent_words_count": 57,
+    "frequency_distribution": {
+      "1": 57,
+      "2": 21,
+      "3": 8,
+      "4": 9,
+      "5": 8,
+      "6": 4,
+      "7": 5,
+      "8": 1,
+      "9": 2,
+      "11": 2,
+      "12": 1,
+      "63": 1
+    }
+  },
+  "bigram_statistics": {
+    "total_bigram_transitions": 381,
+    "unique_bigrams_count": 259,
+    "top_20_bigrams": [
+      {
+        "bigram": "silver key",
+        "w1": "silver",
+        "w2": "key",
+        "frequency": 8
+      },
+      {
+        "bigram": "the silver",
+        "w1": "the",
+        "w2": "silver",
+        "frequency": 8
+      },
+      {
+        "bigram": "near the",
+        "w1": "near",
+        "w2": "the",
+        "frequency": 7
+      },
+      {
+        "bigram": "and the",
+        "w1": "and",
+        "w2": "the",
+        "frequency": 6
+      },
+      {
+        "bigram": "crystal castle",
+        "w1": "crystal",
+        "w2": "castle",
+        "frequency": 6
+      },
+      {
+        "bigram": "dark cave",
+        "w1": "dark",
+        "w2": "cave",
+        "frequency": 6
+      },
+      {
+        "bigram": "the crystal",
+        "w1": "the",
+        "w2": "crystal",
+        "frequency": 6
+      },
+      {
+        "bigram": "secret garden",
+        "w1": "secret",
+        "w2": "garden",
+        "frequency": 5
+      },
+      {
+        "bigram": "the dark",
+        "w1": "the",
+        "w2": "dark",
+        "frequency": 5
+      },
+      {
+        "bigram": "the old",
+        "w1": "the",
+        "w2": "old",
+        "frequency": 5
+      },
+      {
+        "bigram": "the secret",
+        "w1": "the",
+        "w2": "secret",
+        "frequency": 5
+      },
+      {
+        "bigram": "to the",
+        "w1": "to",
+        "w2": "the",
+        "frequency": 5
+      },
+      {
+        "bigram": "castle .",
+        "w1": "castle",
+        "w2": ".",
+        "frequency": 4
+      },
+      {
+        "bigram": "clever cat",
+        "w1": "clever",
+        "w2": "cat",
+        "frequency": 4
+      },
+      {
+        "bigram": "in the",
+        "w1": "in",
+        "w2": "the",
+        "frequency": 4
+      },
+      {
+        "bigram": "liked the",
+        "w1": "liked",
+        "w2": "the",
+        "frequency": 4
+      },
+      {
+        "bigram": "sleepy owl",
+        "w1": "sleepy",
+        "w2": "owl",
+        "frequency": 4
+      },
+      {
+        "bigram": "the brave",
+        "w1": "the",
+        "w2": "brave",
+        "frequency": 4
+      },
+      {
+        "bigram": "the bright",
+        "w1": "the",
+        "w2": "bright",
+        "frequency": 4
+      },
+      {
+        "bigram": "the clever",
+        "w1": "the",
+        "w2": "clever",
+        "frequency": 4
+      }
+    ],
+    "continuations_per_token": {
+      "the": 24,
+      ".": 0,
+      "and": 6,
+      "a": 11,
+      "to": 5,
+      "castle": 6,
+      "silver": 2,
+      "key": 7,
+      "cave": 5,
+      "milo": 7,
+      "near": 1,
+      "pip": 6,
+      "zara": 6,
+      "bright": 3,
+      "crystal": 1,
+      "dark": 1,
+      "garden": 6,
+      "cat": 3,
+      "flew": 4,
+      "forest": 5,
+      "in": 2,
+      "liked": 2,
+      "old": 4,
+      "owl": 5,
+      "secret": 1,
+      "brave": 4,
+      "clever": 1,
+      "dragon": 3,
+      "fox": 4,
+      "lived": 2,
+      "sleepy": 1,
+      "tiny": 2,
+      "trees": 2,
+      "was": 3,
+      "above": 2,
+      "found": 2,
+      "green": 2,
+      "high": 3,
+      "playful": 1,
+      "quiet": 3,
+      "tree": 3,
+      "with": 3,
+      "across": 1,
+      "box": 2,
+      "cool": 2,
+      "find": 2,
+      "friends": 2,
+      "golden": 2,
+      "had": 2,
+      "help": 2,
+      "hidden": 2,
+      "into": 1,
+      "magic": 2,
+      "one": 2,
+      "path": 2,
+      "rested": 2,
+      "saw": 2,
+      "showed": 1,
+      "stone": 2,
+      "sweet": 2,
+      "together": 2,
+      "under": 1,
+      "walked": 2,
+      "around": 1,
+      "birds": 1,
+      "blew": 1,
+      "book": 1,
+      "creature": 1,
+      "day": 1,
+      "door": 1,
+      "every": 1,
+      "excited": 1,
+      "floor": 1,
+      "flowers": 1,
+      "for": 1,
+      "friendly": 1,
+      "from": 1,
+      "gift": 1,
+      "happily": 1,
+      "held": 1,
+      "helped": 1,
+      "inside": 1,
+      "kingdom": 1,
+      "lake": 1,
+      "made": 1,
+      "map": 1,
+      "morning": 1,
+      "moss": 1,
+      "music": 1,
+      "night": 1,
+      "opened": 1,
+      "padlock": 1,
+      "peaceful": 1,
+      "play": 1,
+      "ran": 1,
+      "read": 1,
+      "running": 1,
+      "sang": 1,
+      "see": 1,
+      "shared": 1,
+      "sky": 1,
+      "smelled": 1,
+      "smiled": 1,
+      "soon": 1,
+      "special": 1,
+      "stars": 1,
+      "sunshine": 1,
+      "swift": 1,
+      "there": 1,
+      "tower": 1,
+      "up": 1,
+      "walls": 1,
+      "wand": 1,
+      "watched": 1,
+      "when": 1,
+      "wind": 1,
+      "wings": 1,
+      "wizard": 1,
+      "woke": 1,
+      "wonderful": 1
+    },
+    "active_tokens_count": 119,
+    "average_branching_factor_full_vocab": 2.1583,
+    "average_branching_factor_active_vocab": 2.1765,
+    "bigrams_dict": {
+      "silver key": 8,
+      "the silver": 8,
+      "near the": 7,
+      "and the": 6,
+      "crystal castle": 6,
+      "dark cave": 6,
+      "the crystal": 6,
+      "secret garden": 5,
+      "the dark": 5,
+      "the old": 5,
+      "the secret": 5,
+      "to the": 5,
+      "castle .": 4,
+      "clever cat": 4,
+      "in the": 4,
+      "liked the": 4,
+      "sleepy owl": 4,
+      "the brave": 4,
+      "the bright": 4,
+      "the clever": 4,
+      "bright forest": 3,
+      "lived near": 3,
+      "playful fox": 3,
+      "the castle": 3,
+      "the tiny": 3,
+      "tiny dragon": 3,
+      "trees .": 3,
+      "above the": 2,
+      "across the": 2,
+      "and flew": 2,
+      "bright and": 2,
+      "cat and": 2,
+      "cat milo": 2,
+      "cave .": 2,
+      "cave and": 2,
+      "dragon pip": 2,
+      "flew to": 2,
+      "found the": 2,
+      "green trees": 2,
+      "into the": 2,
+      "key .": 2,
+      "old tree": 2,
+      "pip .": 2,
+      "showed the": 2,
+      "the forest": 2,
+      "the sleepy": 2,
+      "to find": 2,
+      "to help": 2,
+      "under the": 2,
+      "was bright": 2,
+      "zara .": 2,
+      "a dark": 1,
+      "a golden": 1,
+      "a hidden": 1,
+      "a magic": 1,
+      "a peaceful": 1,
+      "a playful": 1,
+      "a quiet": 1,
+      "a silver": 1,
+      "a sleepy": 1,
+      "a special": 1,
+      "a tiny": 1,
+      "above .": 1,
+      "and liked": 1,
+      "and shared": 1,
+      "and showed": 1,
+      "and walked": 1,
+      "around the": 1,
+      "birds sang": 1,
+      "blew green": 1,
+      "book to": 1,
+      "box .": 1,
+      "box with": 1,
+      "brave cat": 1,
+      "brave dragon": 1,
+      "brave fox": 1,
+      "brave friends": 1,
+      "bright green": 1,
+      "castle and": 1,
+      "castle flew": 1,
+      "castle stone": 1,
+      "castle tower": 1,
+      "castle was": 1,
+      "cat liked": 1,
+      "cave had": 1,
+      "cave rested": 1,
+      "cave to": 1,
+      "cool stone": 1,
+      "cool wind": 1,
+      "creature running": 1,
+      "day .": 1,
+      "door in": 1,
+      "dragon .": 1,
+      "dragon with": 1,
+      "every day": 1,
+      "excited and": 1,
+      "find a": 1,
+      "find the": 1,
+      "flew from": 1,
+      "flew high": 1,
+      "flew the": 1,
+      "floor .": 1,
+      "flowers smelled": 1,
+      "for friends": 1,
+      "forest .": 1,
+      "forest every": 1,
+      "forest had": 1,
+      "forest near": 1,
+      "forest trees": 1,
+      "found a": 1,
+      "fox found": 1,
+      "fox liked": 1,
+      "fox near": 1,
+      "fox ran": 1,
+      "friendly wizard": 1,
+      "friends .": 1,
+      "friends lived": 1,
+      "from the": 1,
+      "garden .": 1,
+      "garden and": 1,
+      "garden near": 1,
+      "garden path": 1,
+      "garden was": 1,
+      "garden zara": 1,
+      "gift with": 1,
+      "golden padlock": 1,
+      "golden stars": 1,
+      "green moss": 1,
+      "had cool": 1,
+      "had green": 1,
+      "happily in": 1,
+      "held a": 1,
+      "help pip": 1,
+      "help the": 1,
+      "helped the": 1,
+      "hidden path": 1,
+      "hidden under": 1,
+      "high .": 1,
+      "high above": 1,
+      "high tree": 1,
+      "in a": 1,
+      "inside a": 1,
+      "key and": 1,
+      "key box": 1,
+      "key hidden": 1,
+      "key opened": 1,
+      "key to": 1,
+      "key was": 1,
+      "kingdom .": 1,
+      "lake under": 1,
+      "liked to": 1,
+      "lived happily": 1,
+      "made wonderful": 1,
+      "magic to": 1,
+      "magic wand": 1,
+      "map for": 1,
+      "milo found": 1,
+      "milo liked": 1,
+      "milo lived": 1,
+      "milo saw": 1,
+      "milo showed": 1,
+      "milo smiled": 1,
+      "milo walked": 1,
+      "morning sunshine": 1,
+      "moss .": 1,
+      "music together": 1,
+      "night sky": 1,
+      "old book": 1,
+      "old door": 1,
+      "old map": 1,
+      "one playful": 1,
+      "one sleepy": 1,
+      "opened the": 1,
+      "owl flew": 1,
+      "owl rested": 1,
+      "owl saw": 1,
+      "owl watched": 1,
+      "owl woke": 1,
+      "padlock .": 1,
+      "path .": 1,
+      "path into": 1,
+      "peaceful kingdom": 1,
+      "pip flew": 1,
+      "pip helped": 1,
+      "pip liked": 1,
+      "pip lived": 1,
+      "pip was": 1,
+      "play in": 1,
+      "quiet lake": 1,
+      "quiet night": 1,
+      "quiet when": 1,
+      "ran across": 1,
+      "read the": 1,
+      "rested a": 1,
+      "rested in": 1,
+      "running across": 1,
+      "sang sweet": 1,
+      "saw a": 1,
+      "saw the": 1,
+      "see the": 1,
+      "shared a": 1,
+      "silver box": 1,
+      "sky above": 1,
+      "smelled sweet": 1,
+      "smiled and": 1,
+      "soon the": 1,
+      "special gift": 1,
+      "stars above": 1,
+      "stone floor": 1,
+      "stone walls": 1,
+      "sunshine .": 1,
+      "sweet .": 1,
+      "sweet music": 1,
+      "swift wings": 1,
+      "the birds": 1,
+      "the cave": 1,
+      "the flowers": 1,
+      "the friendly": 1,
+      "the garden": 1,
+      "the golden": 1,
+      "the high": 1,
+      "the morning": 1,
+      "the owl": 1,
+      "the playful": 1,
+      "the quiet": 1,
+      "the trees": 1,
+      "there the": 1,
+      "tiny creature": 1,
+      "to play": 1,
+      "to see": 1,
+      "together .": 1,
+      "together milo": 1,
+      "tower .": 1,
+      "tree .": 1,
+      "tree near": 1,
+      "tree to": 1,
+      "trees and": 1,
+      "up to": 1,
+      "walked into": 1,
+      "walked to": 1,
+      "walls around": 1,
+      "wand to": 1,
+      "was excited": 1,
+      "was quiet": 1,
+      "watched the": 1,
+      "when cool": 1,
+      "wind blew": 1,
+      "wings .": 1,
+      "with a": 1,
+      "with swift": 1,
+      "with zara": 1,
+      "wizard zara": 1,
+      "woke up": 1,
+      "wonderful magic": 1,
+      "zara found": 1,
+      "zara held": 1,
+      "zara lived": 1,
+      "zara made": 1,
+      "zara read": 1
+    }
+  },
+  "pivot_token_analysis": [
+    {
+      "token": "the",
+      "unigram_frequency": 63,
+      "outgoing_transitions": 63,
+      "unique_next_tokens": 24,
+      "continuations": [
+        {
+          "next_token": "silver",
+          "count": 8
+        },
+        {
+          "next_token": "crystal",
+          "count": 6
+        },
+        {
+          "next_token": "dark",
+          "count": 5
+        },
+        {
+          "next_token": "old",
+          "count": 5
+        },
+        {
+          "next_token": "secret",
+          "count": 5
+        },
+        {
+          "next_token": "brave",
+          "count": 4
+        },
+        {
+          "next_token": "bright",
+          "count": 4
+        },
+        {
+          "next_token": "clever",
+          "count": 4
+        },
+        {
+          "next_token": "castle",
+          "count": 3
+        },
+        {
+          "next_token": "tiny",
+          "count": 3
+        },
+        {
+          "next_token": "forest",
+          "count": 2
+        },
+        {
+          "next_token": "sleepy",
+          "count": 2
+        },
+        {
+          "next_token": "birds",
+          "count": 1
+        },
+        {
+          "next_token": "cave",
+          "count": 1
+        },
+        {
+          "next_token": "flowers",
+          "count": 1
+        },
+        {
+          "next_token": "friendly",
+          "count": 1
+        },
+        {
+          "next_token": "garden",
+          "count": 1
+        },
+        {
+          "next_token": "golden",
+          "count": 1
+        },
+        {
+          "next_token": "high",
+          "count": 1
+        },
+        {
+          "next_token": "morning",
+          "count": 1
+        },
+        {
+          "next_token": "owl",
+          "count": 1
+        },
+        {
+          "next_token": "playful",
+          "count": 1
+        },
+        {
+          "next_token": "quiet",
+          "count": 1
+        },
+        {
+          "next_token": "trees",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "token": ".",
+      "unigram_frequency": 34,
+      "outgoing_transitions": 0,
+      "unique_next_tokens": 0,
+      "continuations": []
+    },
+    {
+      "token": "and",
+      "unigram_frequency": 12,
+      "outgoing_transitions": 12,
+      "unique_next_tokens": 6,
+      "continuations": [
+        {
+          "next_token": "the",
+          "count": 6
+        },
+        {
+          "next_token": "flew",
+          "count": 2
+        },
+        {
+          "next_token": "liked",
+          "count": 1
+        },
+        {
+          "next_token": "shared",
+          "count": 1
+        },
+        {
+          "next_token": "showed",
+          "count": 1
+        },
+        {
+          "next_token": "walked",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "token": "a",
+      "unigram_frequency": 11,
+      "outgoing_transitions": 11,
+      "unique_next_tokens": 11,
+      "continuations": [
+        {
+          "next_token": "dark",
+          "count": 1
+        },
+        {
+          "next_token": "golden",
+          "count": 1
+        },
+        {
+          "next_token": "hidden",
+          "count": 1
+        },
+        {
+          "next_token": "magic",
+          "count": 1
+        },
+        {
+          "next_token": "peaceful",
+          "count": 1
+        },
+        {
+          "next_token": "playful",
+          "count": 1
+        },
+        {
+          "next_token": "quiet",
+          "count": 1
+        },
+        {
+          "next_token": "silver",
+          "count": 1
+        },
+        {
+          "next_token": "sleepy",
+          "count": 1
+        },
+        {
+          "next_token": "special",
+          "count": 1
+        },
+        {
+          "next_token": "tiny",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "token": "to",
+      "unigram_frequency": 11,
+      "outgoing_transitions": 11,
+      "unique_next_tokens": 5,
+      "continuations": [
+        {
+          "next_token": "the",
+          "count": 5
+        },
+        {
+          "next_token": "find",
+          "count": 2
+        },
+        {
+          "next_token": "help",
+          "count": 2
+        },
+        {
+          "next_token": "play",
+          "count": 1
+        },
+        {
+          "next_token": "see",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "token": "near",
+      "unigram_frequency": 7,
+      "outgoing_transitions": 7,
+      "unique_next_tokens": 1,
+      "continuations": [
+        {
+          "next_token": "the",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "token": "milo",
+      "unigram_frequency": 7,
+      "outgoing_transitions": 7,
+      "unique_next_tokens": 7,
+      "continuations": [
+        {
+          "next_token": "found",
+          "count": 1
+        },
+        {
+          "next_token": "liked",
+          "count": 1
+        },
+        {
+          "next_token": "lived",
+          "count": 1
+        },
+        {
+          "next_token": "saw",
+          "count": 1
+        },
+        {
+          "next_token": "showed",
+          "count": 1
+        },
+        {
+          "next_token": "smiled",
+          "count": 1
+        },
+        {
+          "next_token": "walked",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "token": "pip",
+      "unigram_frequency": 7,
+      "outgoing_transitions": 7,
+      "unique_next_tokens": 6,
+      "continuations": [
+        {
+          "next_token": ".",
+          "count": 2
+        },
+        {
+          "next_token": "flew",
+          "count": 1
+        },
+        {
+          "next_token": "helped",
+          "count": 1
+        },
+        {
+          "next_token": "liked",
+          "count": 1
+        },
+        {
+          "next_token": "lived",
+          "count": 1
+        },
+        {
+          "next_token": "was",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "token": "zara",
+      "unigram_frequency": 7,
+      "outgoing_transitions": 7,
+      "unique_next_tokens": 6,
+      "continuations": [
+        {
+          "next_token": ".",
+          "count": 2
+        },
+        {
+          "next_token": "found",
+          "count": 1
+        },
+        {
+          "next_token": "held",
+          "count": 1
+        },
+        {
+          "next_token": "lived",
+          "count": 1
+        },
+        {
+          "next_token": "made",
+          "count": 1
+        },
+        {
+          "next_token": "read",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "token": "castle",
+      "unigram_frequency": 9,
+      "outgoing_transitions": 9,
+      "unique_next_tokens": 6,
+      "continuations": [
+        {
+          "next_token": ".",
+          "count": 4
+        },
+        {
+          "next_token": "and",
+          "count": 1
+        },
+        {
+          "next_token": "flew",
+          "count": 1
+        },
+        {
+          "next_token": "stone",
+          "count": 1
+        },
+        {
+          "next_token": "tower",
+          "count": 1
+        },
+        {
+          "next_token": "was",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "token": "cave",
+      "unigram_frequency": 7,
+      "outgoing_transitions": 7,
+      "unique_next_tokens": 5,
+      "continuations": [
+        {
+          "next_token": ".",
+          "count": 2
+        },
+        {
+          "next_token": "and",
+          "count": 2
+        },
+        {
+          "next_token": "had",
+          "count": 1
+        },
+        {
+          "next_token": "rested",
+          "count": 1
+        },
+        {
+          "next_token": "to",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "entity_analysis": {
+    "characters": {
+      "Milo": 7,
+      "Pip": 7,
+      "Zara": 7,
+      "Sleepy Owl": 5,
+      "Playful Fox": 4
+    },
+    "setting_phrases": {
+      "Crystal Castle": 6,
+      "Dark Cave": 6,
+      "Secret Garden": 5,
+      "Bright Forest": 3
+    },
+    "setting_nouns": {
+      "Castle (noun)": 9,
+      "Cave (noun)": 7,
+      "Garden (noun)": 6,
+      "Forest (noun)": 5
+    }
+  }
+}

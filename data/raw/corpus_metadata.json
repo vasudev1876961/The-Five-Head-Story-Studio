@@ -1,0 +1,175 @@
+{
+  "corpus_name": "Five-Head Children's Story Corpus",
+  "version": "1.1.0-audited",
+  "source_classification": "reconstructed",
+  "reconstruction_note": "The original project report detailed statistical targets, transition frequencies, and design parameters, but omitted the verbatim 34 source sentences. This corpus is an exact algorithmic reconstruction designed to satisfy all reported mathematical, grammatical, character, and setting constraints without fabricating identity with the lost original text.",
+  "number_of_sentences": 34,
+  "calculation_conventions": {
+    "punctuation_as_tokens": true,
+    "punctuation_token_rule": "Word-level splitting on lowercase text; sentence-ending period '.' is isolated as an individual token.",
+    "unique_vocabulary_includes_period": true,
+    "unique_vocabulary_composition": "119 word types + 1 period token = 120 unique tokens",
+    "sentence_final_unigram_inclusion": true,
+    "sentence_final_unigram_rule": "Unigram occurrence counts count all occurrences across the corpus, including words occurring immediately before sentence-ending periods.",
+    "sentence_boundary_model": "continuous_flat_stream",
+    "sentence_boundary_rule": "The corpus is processed as a continuous sequence of 415 tokens, yielding 414 bigram transitions, including the 33 inter-sentence boundary transitions where the '.' of sentence k transitions to the first token of sentence k+1.",
+    "branching_factor_formula": "sum(unique_continuations) / count(tokens_with_outgoing_transitions)"
+  },
+  "characters": [
+    {
+      "name": "Milo",
+      "descriptor": "the clever cat",
+      "canonical_token": "milo",
+      "unigram_count": 7
+    },
+    {
+      "name": "Pip",
+      "descriptor": "the tiny dragon",
+      "canonical_token": "pip",
+      "unigram_count": 7
+    },
+    {
+      "name": "Zara",
+      "descriptor": "the friendly wizard",
+      "canonical_token": "zara",
+      "unigram_count": 7
+    },
+    {
+      "name": "Sleepy Owl",
+      "descriptor": "a sleepy owl",
+      "canonical_token": "owl",
+      "unigram_count": 5
+    },
+    {
+      "name": "Playful Fox",
+      "descriptor": "a playful fox",
+      "canonical_token": "fox",
+      "unigram_count": 4
+    }
+  ],
+  "settings": [
+    {
+      "name": "Bright Forest",
+      "canonical_token": "forest",
+      "unigram_count": 5
+    },
+    {
+      "name": "Crystal Castle",
+      "canonical_token": "castle",
+      "unigram_count": 9
+    },
+    {
+      "name": "Dark Cave",
+      "canonical_token": "cave",
+      "unigram_count": 7
+    },
+    {
+      "name": "Secret Garden",
+      "canonical_token": "garden",
+      "unigram_count": 6
+    }
+  ],
+  "original_reference_targets": {
+    "sentences": 34,
+    "words": 381,
+    "total_tokens_with_period": 415,
+    "unique_vocabulary": 120,
+    "avg_words_per_sentence": 11.21,
+    "flesch_kincaid_grade_level": 4.02,
+    "avg_bigram_branching_factor": 1.95,
+    "reference_pivot_occurrences": {
+      "the": 63,
+      ".": 33,
+      "and": 12,
+      "a": 11,
+      "to": 11,
+      "milo": 7,
+      "pip": 7,
+      "zara": 7,
+      "near": 8,
+      "castle": 6,
+      "cave": 5
+    },
+    "reference_pivot_unique_next": {
+      "the": 21,
+      ".": 12,
+      "and": 6,
+      "a": 10,
+      "to": 6,
+      "milo": 7,
+      "pip": 6,
+      "zara": 7
+    }
+  },
+  "actual_reconstructed_statistics": {
+    "sentences": 34,
+    "words": 381,
+    "total_tokens_with_period": 415,
+    "unique_vocabulary": 120,
+    "avg_words_per_sentence": 11.21,
+    "flesch_kincaid_grade_level": 3.99,
+    "avg_bigram_branching_factor_flat_stream": 2.26,
+    "avg_bigram_branching_factor_within_sentence": 2.18,
+    "total_bigram_transitions_flat": 414,
+    "unique_bigrams_flat": 271,
+    "total_bigram_transitions_within_sentence": 381,
+    "unique_bigrams_within_sentence": 259,
+    "audited_pivot_statistics": {
+      "the": {
+        "unigram_count": 63,
+        "out_transitions": 63,
+        "unique_next": 24
+      },
+      ".": {
+        "unigram_count": 34,
+        "out_transitions": 33,
+        "unique_next": 12
+      },
+      "and": {
+        "unigram_count": 12,
+        "out_transitions": 12,
+        "unique_next": 6
+      },
+      "a": {
+        "unigram_count": 11,
+        "out_transitions": 11,
+        "unique_next": 11
+      },
+      "to": {
+        "unigram_count": 11,
+        "out_transitions": 11,
+        "unique_next": 5
+      },
+      "milo": {
+        "unigram_count": 7,
+        "out_transitions": 7,
+        "unique_next": 7
+      },
+      "pip": {
+        "unigram_count": 7,
+        "out_transitions": 7,
+        "unique_next": 6
+      },
+      "zara": {
+        "unigram_count": 7,
+        "out_transitions": 7,
+        "unique_next": 6
+      },
+      "near": {
+        "unigram_count": 7,
+        "out_transitions": 7,
+        "unique_next": 1
+      },
+      "castle": {
+        "unigram_count": 9,
+        "out_transitions": 9,
+        "unique_next": 6
+      },
+      "cave": {
+        "unigram_count": 7,
+        "out_transitions": 7,
+        "unique_next": 5
+      }
+    }
+  }
+}

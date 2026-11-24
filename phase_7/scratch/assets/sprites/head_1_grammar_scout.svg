@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <!-- Grammar Scout Owl -->
+  <circle cx="40" cy="40" r="36" fill="#1f2937" stroke="#58a6ff" stroke-width="3"/>
+  <path d="M 24 22 L 40 10 L 56 22 Z" fill="#58a6ff"/>
+  <polygon points="40,6 20,18 40,24 60,18" fill="#388bfd"/>
+  <rect x="38" y="22" width="4" height="12" fill="#ffd700"/>
+  <!-- Eyes -->
+  <circle cx="30" cy="38" r="10" fill="#ffffff" stroke="#58a6ff" stroke-width="2"/>
+  <circle cx="50" cy="38" r="10" fill="#ffffff" stroke="#58a6ff" stroke-width="2"/>
+  <circle cx="30" cy="38" r="4.5" fill="#0d1117"/>
+  <circle cx="50" cy="38" r="4.5" fill="#0d1117"/>
+  <!-- Glasses Bridge & Beak -->
+  <line x1="38" y1="38" x2="42" y2="38" stroke="#58a6ff" stroke-width="2.5"/>
+  <polygon points="40,43 36,49 44,49" fill="#ffab70"/>
+  <!-- Label -->
+  <rect x="8" y="60" width="64" height="15" rx="4" fill="#0d1117" stroke="#58a6ff" stroke-width="1"/>
+  <text x="40" y="71" font-family="Arial, sans-serif" font-size="7.5" font-weight="bold" fill="#58a6ff" text-anchor="middle">H1: GRAMMAR</text>
+</svg>

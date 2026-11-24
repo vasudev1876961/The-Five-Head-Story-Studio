@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1f242d"/>
+      <stop offset="100%" stop-color="#2d333b"/>
+    </linearGradient>
+    <linearGradient id="storyBoxGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2128"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Grid Lines -->
+  <g stroke="#30363d" stroke-width="0.5" opacity="0.3">
+    <line x1="0" y1="60" x2="480" y2="60"/>
+    <line x1="0" y1="180" x2="480" y2="180"/>
+    <line x1="0" y1="280" x2="480" y2="280"/>
+    <line x1="160" y1="0" x2="160" y2="360"/>
+    <line x1="320" y1="0" x2="320" y2="360"/>
+  </g>
+
+  <!-- Header Banner -->
+  <rect x="10" y="8" width="460" height="42" rx="8" fill="url(#headerGrad)" stroke="#388bfd" stroke-width="1.5"/>
+  <text x="240" y="32" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="bold" fill="#58a6ff" text-anchor="middle">
+    THE FIVE-HEAD STORY MACHINE
+  </text>
+  <text x="240" y="44" font-family="'Segoe UI', Arial, sans-serif" font-size="8.5" fill="#8b949e" text-anchor="middle">
+    Transparent Multi-Head NLP Story Generation &amp; Hamilton d10 Die Simulator
+  </text>
+
+  <!-- Five Heads Shelf Frame -->
+  <rect x="10" y="56" width="460" height="84" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="20" y="70" font-family="'Segoe UI', Arial, sans-serif" font-size="9" font-weight="bold" fill="#8b949e">
+    SCORING HEADS (CLICK A HEAD TO LEARN ITS RULE):
+  </text>
+
+  <!-- Story Display Card Area -->
+  <rect x="10" y="278" width="460" height="74" rx="8" fill="url(#storyBoxGrad)" stroke="#388bfd" stroke-width="1.2"/>
+  <text x="24" y="294" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="bold" fill="#7ee787">
+    STORY NARRATIVE OUTPUT:
+  </text>
+</svg>

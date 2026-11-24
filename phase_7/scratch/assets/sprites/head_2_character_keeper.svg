@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <!-- Character Keeper Guardian -->
+  <circle cx="40" cy="40" r="36" fill="#1f2937" stroke="#f778ba" stroke-width="3"/>
+  <!-- Guardian Face / Heart Shield -->
+  <circle cx="40" cy="32" r="14" fill="#f778ba" opacity="0.3"/>
+  <circle cx="40" cy="30" r="9" fill="#f778ba"/>
+  <path d="M 22 52 C 22 41, 58 41, 58 52 Z" fill="#f778ba"/>
+  <!-- Crown / Star -->
+  <polygon points="40,14 43,20 49,20 44,24 46,30 40,26 34,30 36,24 31,20 37,20" fill="#ffd700"/>
+  <!-- Label -->
+  <rect x="6" y="60" width="68" height="15" rx="4" fill="#0d1117" stroke="#f778ba" stroke-width="1"/>
+  <text x="40" y="71" font-family="Arial, sans-serif" font-size="7.5" font-weight="bold" fill="#f778ba" text-anchor="middle">H2: CHARACTER</text>
+</svg>

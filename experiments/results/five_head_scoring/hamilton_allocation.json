@@ -1,0 +1,87 @@
+{
+  "Balanced (Default)": {
+    "weights": {
+      "Grammar Scout": 0.4,
+      "Character Keeper": 0.15,
+      "Setting Painter": 0.15,
+      "Action Booster": 0.1,
+      "Repeat Blocker": 0.2
+    },
+    "d10_allocation": {
+      "Grammar Scout": 4,
+      "Character Keeper": 2,
+      "Setting Painter": 1,
+      "Action Booster": 1,
+      "Repeat Blocker": 2
+    },
+    "total_points": 10
+  },
+  "Grammar-Dominated": {
+    "weights": {
+      "Grammar Scout": 0.8,
+      "Character Keeper": 0.05,
+      "Setting Painter": 0.05,
+      "Action Booster": 0.05,
+      "Repeat Blocker": 0.05
+    },
+    "d10_allocation": {
+      "Grammar Scout": 8,
+      "Character Keeper": 1,
+      "Setting Painter": 1,
+      "Action Booster": 0,
+      "Repeat Blocker": 0
+    },
+    "total_points": 10
+  },
+  "Character-Heavy": {
+    "weights": {
+      "Grammar Scout": 0.3,
+      "Character Keeper": 0.45,
+      "Setting Painter": 0.1,
+      "Action Booster": 0.05,
+      "Repeat Blocker": 0.1
+    },
+    "d10_allocation": {
+      "Grammar Scout": 3,
+      "Character Keeper": 5,
+      "Setting Painter": 1,
+      "Action Booster": 0,
+      "Repeat Blocker": 1
+    },
+    "total_points": 10
+  },
+  "Action-Heavy": {
+    "weights": {
+      "Grammar Scout": 0.3,
+      "Character Keeper": 0.1,
+      "Setting Painter": 0.1,
+      "Action Booster": 0.4,
+      "Repeat Blocker": 0.1
+    },
+    "d10_allocation": {
+      "Grammar Scout": 3,
+      "Character Keeper": 1,
+      "Setting Painter": 1,
+      "Action Booster": 4,
+      "Repeat Blocker": 1
+    },
+    "total_points": 10
+  },
+  "Setting-Heavy": {
+    "weights": {
+      "Grammar Scout": 0.3,
+      "Character Keeper": 0.1,
+      "Setting Painter": 0.45,
+      "Action Booster": 0.05,
+      "Repeat Blocker": 0.1
+    },
+    "d10_allocation": {
+      "Grammar Scout": 3,
+      "Character Keeper": 1,
+      "Setting Painter": 5,
+      "Action Booster": 0,
+      "Repeat Blocker": 1
+    },
+    "total_points": 10
+  }
+}

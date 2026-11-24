@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <!-- Setting Painter Artist -->
+  <circle cx="40" cy="40" r="36" fill="#1f2937" stroke="#7ee787" stroke-width="3"/>
+  <!-- Castle / Forest Landscape -->
+  <polygon points="20,52 32,32 44,52" fill="#56d364"/>
+  <polygon points="36,52 48,26 60,52" fill="#3ea54c"/>
+  <!-- Sun / Moon -->
+  <circle cx="28" cy="24" r="6" fill="#ffd700"/>
+  <!-- Palette / Brush -->
+  <circle cx="54" cy="44" r="5" fill="#7ee787" stroke="#1f2937" stroke-width="1.5"/>
+  <circle cx="53" cy="43" r="1.5" fill="#ff7b72"/>
+  <circle cx="56" cy="45" r="1.5" fill="#58a6ff"/>
+  <!-- Label -->
+  <rect x="8" y="60" width="64" height="15" rx="4" fill="#0d1117" stroke="#7ee787" stroke-width="1"/>
+  <text x="40" y="71" font-family="Arial, sans-serif" font-size="7.5" font-weight="bold" fill="#7ee787" text-anchor="middle">H3: SETTING</text>
+</svg>

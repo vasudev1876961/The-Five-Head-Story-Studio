@@ -1,0 +1,355 @@
+[
+  {
+    "context": [],
+    "greedy_selection": "the",
+    "top_k_selection": ".",
+    "temperature_selection": "flew",
+    "top_candidates": [
+      {
+        "rank": 1,
+        "token": "the",
+        "probability": 0.1145
+      },
+      {
+        "rank": 2,
+        "token": ".",
+        "probability": 0.0636
+      },
+      {
+        "rank": 3,
+        "token": "and",
+        "probability": 0.028
+      },
+      {
+        "rank": 4,
+        "token": "castle",
+        "probability": 0.0254
+      },
+      {
+        "rank": 5,
+        "token": "a",
+        "probability": 0.0204
+      }
+    ]
+  },
+  {
+    "context": [
+      "the"
+    ],
+    "greedy_selection": "crystal",
+    "top_k_selection": "secret",
+    "temperature_selection": "old",
+    "top_candidates": [
+      {
+        "rank": 1,
+        "token": "crystal",
+        "probability": 0.125
+      },
+      {
+        "rank": 2,
+        "token": "silver",
+        "probability": 0.125
+      },
+      {
+        "rank": 3,
+        "token": "secret",
+        "probability": 0.1023
+      },
+      {
+        "rank": 4,
+        "token": "castle",
+        "probability": 0.0568
+      },
+      {
+        "rank": 5,
+        "token": "clever",
+        "probability": 0.0568
+      }
+    ]
+  },
+  {
+    "context": [
+      "milo"
+    ],
+    "greedy_selection": "found",
+    "top_k_selection": "saw",
+    "temperature_selection": "the",
+    "top_candidates": [
+      {
+        "rank": 1,
+        "token": "found",
+        "probability": 0.0833
+      },
+      {
+        "rank": 2,
+        "token": "liked",
+        "probability": 0.0833
+      },
+      {
+        "rank": 3,
+        "token": "lived",
+        "probability": 0.0833
+      },
+      {
+        "rank": 4,
+        "token": "saw",
+        "probability": 0.0833
+      },
+      {
+        "rank": 5,
+        "token": "smiled",
+        "probability": 0.0833
+      }
+    ]
+  },
+  {
+    "context": [
+      "pip"
+    ],
+    "greedy_selection": ".",
+    "top_k_selection": "liked",
+    "temperature_selection": "was",
+    "top_candidates": [
+      {
+        "rank": 1,
+        "token": ".",
+        "probability": 0.125
+      },
+      {
+        "rank": 2,
+        "token": "flew",
+        "probability": 0.125
+      },
+      {
+        "rank": 3,
+        "token": "liked",
+        "probability": 0.125
+      },
+      {
+        "rank": 4,
+        "token": "was",
+        "probability": 0.125
+      },
+      {
+        "rank": 5,
+        "token": "the",
+        "probability": 0.0637
+      }
+    ]
+  },
+  {
+    "context": [
+      "the",
+      "crystal"
+    ],
+    "greedy_selection": "castle",
+    "top_k_selection": "castle",
+    "temperature_selection": "castle",
+    "top_candidates": [
+      {
+        "rank": 1,
+        "token": "castle",
+        "probability": 0.9167
+      },
+      {
+        "rank": 2,
+        "token": "the",
+        "probability": 0.0098
+      },
+      {
+        "rank": 3,
+        "token": ".",
+        "probability": 0.0054
+      },
+      {
+        "rank": 4,
+        "token": "and",
+        "probability": 0.0024
+      },
+      {
+        "rank": 5,
+        "token": "a",
+        "probability": 0.0017
+      }
+    ]
+  },
+  {
+    "context": [
+      "in",
+      "the"
+    ],
+    "greedy_selection": "bright",
+    "top_k_selection": "secret",
+    "temperature_selection": "silver",
+    "top_candidates": [
+      {
+        "rank": 1,
+        "token": "bright",
+        "probability": 0.1667
+      },
+      {
+        "rank": 2,
+        "token": "crystal",
+        "probability": 0.1667
+      },
+      {
+        "rank": 3,
+        "token": "secret",
+        "probability": 0.1667
+      },
+      {
+        "rank": 4,
+        "token": "silver",
+        "probability": 0.0846
+      },
+      {
+        "rank": 5,
+        "token": "castle",
+        "probability": 0.0385
+      }
+    ]
+  },
+  {
+    "context": [
+      "near",
+      "the"
+    ],
+    "greedy_selection": "castle",
+    "top_k_selection": "secret",
+    "temperature_selection": "silver",
+    "top_candidates": [
+      {
+        "rank": 1,
+        "token": "castle",
+        "probability": 0.125
+      },
+      {
+        "rank": 2,
+        "token": "crystal",
+        "probability": 0.125
+      },
+      {
+        "rank": 3,
+        "token": "dark",
+        "probability": 0.125
+      },
+      {
+        "rank": 4,
+        "token": "secret",
+        "probability": 0.125
+      },
+      {
+        "rank": 5,
+        "token": "silver",
+        "probability": 0.0948
+      }
+    ]
+  },
+  {
+    "context": [
+      "dark",
+      "cave"
+    ],
+    "greedy_selection": ".",
+    "top_k_selection": "rested",
+    "temperature_selection": "to",
+    "top_candidates": [
+      {
+        "rank": 1,
+        "token": ".",
+        "probability": 0.125
+      },
+      {
+        "rank": 2,
+        "token": "and",
+        "probability": 0.125
+      },
+      {
+        "rank": 3,
+        "token": "rested",
+        "probability": 0.125
+      },
+      {
+        "rank": 4,
+        "token": "to",
+        "probability": 0.125
+      },
+      {
+        "rank": 5,
+        "token": "the",
+        "probability": 0.0647
+      }
+    ]
+  },
+  {
+    "context": [
+      "secret",
+      "garden"
+    ],
+    "greedy_selection": ".",
+    "top_k_selection": "was",
+    "temperature_selection": "zara",
+    "top_candidates": [
+      {
+        "rank": 1,
+        "token": ".",
+        "probability": 0.1
+      },
+      {
+        "rank": 2,
+        "token": "and",
+        "probability": 0.1
+      },
+      {
+        "rank": 3,
+        "token": "near",
+        "probability": 0.1
+      },
+      {
+        "rank": 4,
+        "token": "was",
+        "probability": 0.1
+      },
+      {
+        "rank": 5,
+        "token": "zara",
+        "probability": 0.1
+      }
+    ]
+  },
+  {
+    "context": [
+      "unknown_word"
+    ],
+    "greedy_selection": "the",
+    "top_k_selection": ".",
+    "temperature_selection": "flew",
+    "top_candidates": [
+      {
+        "rank": 1,
+        "token": "the",
+        "probability": 0.1145
+      },
+      {
+        "rank": 2,
+        "token": ".",
+        "probability": 0.0636
+      },
+      {
+        "rank": 3,
+        "token": "and",
+        "probability": 0.028
+      },
+      {
+        "rank": 4,
+        "token": "castle",
+        "probability": 0.0254
+      },
+      {
+        "rank": 5,
+        "token": "a",
+        "probability": 0.0204
+      }
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software in research or education, please cite it as below."
+title: "The Five-Head Story-Generation System"
+version: 1.0.0
+date-released: 2026-11-24
+authors:
+  - name: "The Five-Head NLP Development Team"
+abstract: "A transparent, multi-head story generation system utilizing statistical language modeling, inspectable scoring heads, and Hamilton apportionment for explainable narrative generation."
+keywords:
+  - "natural language processing"
+  - "story generation"
+  - "statistical language models"
+  - "explainable ai"
+  - "educational technology"
+license: "MIT"
+repository-code: "https://github.com/example/NLP-GAME-PROJECT"

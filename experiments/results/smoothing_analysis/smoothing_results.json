@@ -1,0 +1,282 @@
+{
+  "split_info": {
+    "total_sentences": 34,
+    "train_sentences": 24,
+    "validation_sentences": 5,
+    "test_sentences": 5,
+    "random_seed": 42,
+    "train_tokens": 295,
+    "val_tokens": 62,
+    "test_tokens": 58
+  },
+  "test_results": [
+    {
+      "name": "Unsmoothed MLE (Trigram)",
+      "evaluated_prediction_events": 58,
+      "zero_probability_events": 45,
+      "zero_event_rate_pct": 77.59,
+      "total_negative_log_likelihood": "inf",
+      "mean_cross_entropy_nats": "inf",
+      "mean_cross_entropy_bits": "inf",
+      "perplexity": "inf",
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Laplace (Add-1)",
+      "evaluated_prediction_events": 58,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 269.2957,
+      "mean_cross_entropy_nats": 4.643,
+      "mean_cross_entropy_bits": 6.6985,
+      "perplexity": 103.8586,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Add-k (k=0.1)",
+      "evaluated_prediction_events": 58,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 258.8915,
+      "mean_cross_entropy_nats": 4.4636,
+      "mean_cross_entropy_bits": 6.4397,
+      "perplexity": 86.8035,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Add-k (k=0.5)",
+      "evaluated_prediction_events": 58,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 266.0458,
+      "mean_cross_entropy_nats": 4.587,
+      "mean_cross_entropy_bits": 6.6176,
+      "perplexity": 98.1991,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Good-Turing",
+      "evaluated_prediction_events": 58,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 254.8387,
+      "mean_cross_entropy_nats": 4.3938,
+      "mean_cross_entropy_bits": 6.3389,
+      "perplexity": 80.9451,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Absolute Discounting Backoff",
+      "evaluated_prediction_events": 58,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 216.8316,
+      "mean_cross_entropy_nats": 3.7385,
+      "mean_cross_entropy_bits": 5.3935,
+      "perplexity": 42.0339,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Linear Interpolation (Fixed: 0.15, 0.35, 0.50)",
+      "evaluated_prediction_events": 58,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 223.1544,
+      "mean_cross_entropy_nats": 3.8475,
+      "mean_cross_entropy_bits": 5.5508,
+      "perplexity": 46.8752,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Linear Interpolation (Optimized on Val: (0.65, 0.2, 0.15))",
+      "evaluated_prediction_events": 58,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 219.7486,
+      "mean_cross_entropy_nats": 3.7888,
+      "mean_cross_entropy_bits": 5.466,
+      "perplexity": 44.2019,
+      "avg_probability_simplex_sum": 1.0
+    }
+  ],
+  "validation_results": [
+    {
+      "name": "Unsmoothed MLE (Trigram)",
+      "evaluated_prediction_events": 62,
+      "zero_probability_events": 52,
+      "zero_event_rate_pct": 83.87,
+      "total_negative_log_likelihood": "inf",
+      "mean_cross_entropy_nats": "inf",
+      "mean_cross_entropy_bits": "inf",
+      "perplexity": "inf",
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Laplace (Add-1)",
+      "evaluated_prediction_events": 62,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 285.2093,
+      "mean_cross_entropy_nats": 4.6001,
+      "mean_cross_entropy_bits": 6.6366,
+      "perplexity": 99.4992,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Add-k (k=0.1)",
+      "evaluated_prediction_events": 62,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 281.3578,
+      "mean_cross_entropy_nats": 4.538,
+      "mean_cross_entropy_bits": 6.547,
+      "perplexity": 93.5063,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Add-k (k=0.5)",
+      "evaluated_prediction_events": 62,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 283.2601,
+      "mean_cross_entropy_nats": 4.5687,
+      "mean_cross_entropy_bits": 6.5913,
+      "perplexity": 96.4198,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Good-Turing",
+      "evaluated_prediction_events": 62,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 281.1397,
+      "mean_cross_entropy_nats": 4.5345,
+      "mean_cross_entropy_bits": 6.5419,
+      "perplexity": 93.178,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Absolute Discounting Backoff",
+      "evaluated_prediction_events": 62,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 260.1142,
+      "mean_cross_entropy_nats": 4.1954,
+      "mean_cross_entropy_bits": 6.0527,
+      "perplexity": 66.3796,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Linear Interpolation (Fixed: 0.15, 0.35, 0.50)",
+      "evaluated_prediction_events": 62,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 274.4743,
+      "mean_cross_entropy_nats": 4.427,
+      "mean_cross_entropy_bits": 6.3868,
+      "perplexity": 83.6804,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Linear Interpolation (Optimized on Val: (0.65, 0.2, 0.15))",
+      "evaluated_prediction_events": 62,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 254.455,
+      "mean_cross_entropy_nats": 4.1041,
+      "mean_cross_entropy_bits": 5.921,
+      "perplexity": 60.5889,
+      "avg_probability_simplex_sum": 1.0
+    }
+  ],
+  "training_results": [
+    {
+      "name": "Unsmoothed MLE (Trigram)",
+      "evaluated_prediction_events": 295,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 205.6924,
+      "mean_cross_entropy_nats": 0.6973,
+      "mean_cross_entropy_bits": 1.0059,
+      "perplexity": 2.0082,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Laplace (Add-1)",
+      "evaluated_prediction_events": 295,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 1161.5466,
+      "mean_cross_entropy_nats": 3.9374,
+      "mean_cross_entropy_bits": 5.6805,
+      "perplexity": 51.2874,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Add-k (k=0.1)",
+      "evaluated_prediction_events": 295,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 729.0126,
+      "mean_cross_entropy_nats": 2.4712,
+      "mean_cross_entropy_bits": 3.5652,
+      "perplexity": 11.837,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Add-k (k=0.5)",
+      "evaluated_prediction_events": 295,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 1048.7618,
+      "mean_cross_entropy_nats": 3.5551,
+      "mean_cross_entropy_bits": 5.129,
+      "perplexity": 34.9922,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Good-Turing",
+      "evaluated_prediction_events": 295,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 687.3463,
+      "mean_cross_entropy_nats": 2.33,
+      "mean_cross_entropy_bits": 3.3615,
+      "perplexity": 10.2778,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Absolute Discounting Backoff",
+      "evaluated_prediction_events": 295,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 371.3804,
+      "mean_cross_entropy_nats": 1.2589,
+      "mean_cross_entropy_bits": 1.8162,
+      "perplexity": 3.5216,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Linear Interpolation (Fixed: 0.15, 0.35, 0.50)",
+      "evaluated_prediction_events": 295,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 293.8126,
+      "mean_cross_entropy_nats": 0.996,
+      "mean_cross_entropy_bits": 1.4369,
+      "perplexity": 2.7074,
+      "avg_probability_simplex_sum": 1.0
+    },
+    {
+      "name": "Linear Interpolation (Optimized on Val: (0.65, 0.2, 0.15))",
+      "evaluated_prediction_events": 295,
+      "zero_probability_events": 0,
+      "zero_event_rate_pct": 0.0,
+      "total_negative_log_likelihood": 534.2086,
+      "mean_cross_entropy_nats": 1.8109,
+      "mean_cross_entropy_bits": 2.6125,
+      "perplexity": 6.1158,
+      "avg_probability_simplex_sum": 1.0
+    }
+  ]
+}
