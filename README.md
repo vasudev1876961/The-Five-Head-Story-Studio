@@ -73,9 +73,9 @@ Narrative State Update & Autoregressive Story Rollout
 
 ## ⚙️ Technical Requirements & Installation
 
-- **Python Compatibility**: Python 3.10, 3.11, 3.12 (`>=3.10`)
+- **Python Compatibility**: `requires-python >= 3.10` (`Python 3.12.8` runtime-verified locally on Windows; Python `3.10` and `3.11` statically assessed and configured alongside `ubuntu-latest`/`macos-latest` in CI, pending remote GitHub Actions execution)
 - **Zero Black-Box Dependencies**: Strictly no external LLM APIs (OpenAI, Anthropic, Gemini) and no opaque pretrained neural networks (BERT, GPT, HuggingFace transformers).
-- **Mathematical Integrity**: Dual-mode scoring (Classroom Integer Mode via Hamilton/d10 allocation vs. Continuous Boltzmann/Temperature Softmax).
+- **Mathematical Integrity**: Weighted linear score fusion (`ScoreFusion`) with continuous scoring; Hamilton `d10` integer apportionment (`HamiltonApportionment`) serves as an explanatory classroom representation.
 
 ### Standard Installation
 
@@ -125,23 +125,30 @@ Evaluates Unigram, Bigram, and Trigram language models across 5 smoothing techni
 
 ## 🧪 Quality Assurance & Verification
 
-### Run Automated Unit & Integration Suite
+### Run Automated Full Test Suite (351 Tests)
 ```bash
-pytest tests -v
+python -m pytest tests -v
 ```
-*Current test suite: **319 passing tests** with 0 failures, 0 errors, and 0 skips.*
+*Full suite (automatically discovered): **351 passing tests** (`319` unit & integration tests, `8` Streamlit process lifecycle scenarios, and `24` reproducibility harness tests) with 0 failures, 0 errors, and 0 skips on Python 3.12.8.*
 
 ### Run Streamlit Lifecycle Verification (8 Scenarios)
 ```bash
-pytest tests/test_ui/verify_studio_lifecycle.py -v
+python -m pytest tests/test_ui/test_studio_lifecycle.py -v
 ```
 *Verifies clean startup, `/_stcore/health` HTTP 200 with body `"ok"`, 3.0s observation, graceful signal shutdown, port release, and fallback termination.*
+
+### Verify Coverage Baseline & Reproducibility Harness
+```bash
+python -m pytest tests --cov=src/five_head_nlp --cov-branch --cov-report=term-missing --cov-report=xml:reports/coverage.xml --cov-fail-under=70
+python -m five_head_nlp.experiments.reproduce_all --dry-run
+```
+*Current measured coverage across the 88 discovered modules: `76.10%` statement (gate `72%`), `66.88%` branch (gate `63%`), and `74.20%` combined (gate `70%`). Four unimported files under `src/five_head_nlp/experiments/` remain excluded due to the absence of `__init__.py` (see [Developer Handbook](docs/developer_handbook.md)).*
 
 ### Validate Scratch 3.0 Educational Project
 ```bash
 python phase_7/scratch/validate_sb3.py
 ```
-*Validates ZIP archive integrity, AST JSON schema, and all 12 SVG MD5 checksums (100% valid).*
+*Validates ZIP archive integrity, AST JSON schema, all 12 SVG MD5 checksums, and weight/Hamilton summation checks structurally (note: structural `.sb3` validation is not equivalent to manual execution in the Scratch editor).*
 
 ---
 
@@ -160,7 +167,8 @@ Phase 7 introduces **The Five-Head Story Machine** for K-12 and introductory AI 
 
 ```text
 NLP-GAME-PROJECT/
-├── pyproject.toml                 # Modern PEP 518/621 packaging configuration
+├── .github/workflows/ci.yml       # Cross-platform CI matrix (Windows, Ubuntu, macOS; Py 3.10–3.12)
+├── pyproject.toml                 # Modern PEP 518/621 packaging & coverage configuration
 ├── requirements.txt               # Pinned project dependencies
 ├── pytest.ini                     # Pytest configuration
 ├── LICENSE                        # MIT Open Source License
@@ -173,7 +181,9 @@ NLP-GAME-PROJECT/
 │   ├── raw/story_corpus.txt       # Canonical 34-sentence children's story corpus
 │   └── processed/                 # Tokenized corpora, vocabulary mappings
 ├── docs/                          # Technical specifications & documentation
+│   ├── academic_defense_runbook.md# Academic defense runbook & viva Q&A
 │   ├── architecture.md            # System architecture
+│   ├── developer_handbook.md      # Developer onboarding, CLI, CI & troubleshooting
 │   ├── implementation_log.md      # Engineering milestones & changelog
 │   ├── mathematical_formulation.md# Probabilistic & mathematical specifications
 │   ├── phase_5_experimental_methodology.md # Phase 5 benchmark replication guide
@@ -205,9 +215,9 @@ NLP-GAME-PROJECT/
 │   ├── heads/                     # The Five Transparent Scoring Heads (H1 to H5)
 │   ├── prediction/                # Decoders (Greedy, Top-k, Temperature) & predictor
 │   ├── decoding/                  # Compatibility facade for decoding strategies
-│   ├── experiments/               # Canonical CLI entry points, metrics, aggregation
+│   ├── experiments/               # CLI entry points, configs, metrics, generation & reproduce_all harness
 │   └── ui/                        # Streamlit web application & CLI wrapper
-└── tests/                         # Automated test suite (319 unit & integration tests)
+└── tests/                         # Automated test suite (351 tests across all sub-suites)
     ├── test_tokenization/
     ├── test_models/
     ├── test_probability/
@@ -215,9 +225,17 @@ NLP-GAME-PROJECT/
     ├── test_heads/
     ├── test_prediction/
     ├── test_decoding/             # Facade re-export regression tests
-    ├── test_experiments/
-    └── test_ui/                   # UI services & 8-scenario lifecycle harness
+    ├── test_experiments/          # Metrics, harness & reproducibility tests
+    └── test_ui/                   # UI services & 8-scenario lifecycle harness (test_studio_lifecycle.py)
 ```
+
+---
+
+## 📚 Handover & Reference Documentation
+
+- [Developer Handbook](docs/developer_handbook.md) — Environment setup, exact CLI & test commands, package architecture, coverage discovery details, CI matrix, and troubleshooting.
+- [Academic Defense Runbook](docs/academic_defense_runbook.md) — Mathematical formulations, empirical smoothing & Monte Carlo results, Phase 9 reproducibility statistics, limitations, and viva Q&A.
+- [Release Notes (v1.0.0)](docs/release_notes_v1.0.md) — Verified release summary and known platform containment boundaries.
 
 ---
 
@@ -231,6 +249,7 @@ NLP-GAME-PROJECT/
 - [x] **Phase 6: Interactive Streamlit Glass-Box Web Application** (Completed)
 - [x] **Phase 7: Scratch 3.0 Project Assets & Classroom Unplugged Guide** (Completed)
 - [x] **Phase 8: Final Integration, Quality Assurance & Release Preparation (v1.0.0)** (Completed)
+- [x] **Phase 9: Reproducibility Harness, Coverage Gates, CI Matrix & Handover (Local Verification Complete; Remote CI Pending)** (Completed)
 
 ---
 

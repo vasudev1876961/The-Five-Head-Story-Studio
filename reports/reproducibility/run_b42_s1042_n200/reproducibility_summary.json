@@ -1,0 +1,607 @@
+{
+  "run_id": "run_b42_s1042_n200",
+  "output_dir": "C:\\Users\\vasud\\OneDrive\\Desktop\\NLP-GAME-PROJECT\\reports\\reproducibility\\run_b42_s1042_n200",
+  "overall_verdict": "REPRODUCED_EXACT_AND_EQUIVALENT",
+  "base_seed": 42,
+  "stochastic_seed": 1042,
+  "stories_per_config": 200,
+  "total_stories_generated": 1600,
+  "total_failures": 0,
+  "wall_time_sec": 251.9293,
+  "throughput_stories_per_sec": 6.35,
+  "evaluated_configs": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E7",
+    "E8"
+  ],
+  "skipped_configs": [],
+  "deterministic_configs": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E7"
+  ],
+  "stochastic_configs": [
+    "E6",
+    "E8"
+  ],
+  "canonical_audit": {
+    "e6_verified_k": 5,
+    "canonical_config_semantic_hash": "CE63533CA8C37379910642B087B117F2100307B3BB5B9B853C73C8645B9617E0",
+    "registry_config_semantic_hash": "CE63533CA8C37379910642B087B117F2100307B3BB5B9B853C73C8645B9617E0",
+    "canonical_hashes": {
+      "story_corpus.txt": "76142D79CCA9737A442974D879BCC3F98F5B56ABFEE1F9556840BC44D3609A4F",
+      "configurations.json": "CD36F68A97130AA5EDAA51F238CE7980F5F0937CBF2E68BE0E39035078159512",
+      "generated_stories.jsonl": "BE831AB21442C84F6BE4844332C78F2A5B6FBE58DB2168A6E0757FB655917177",
+      "per_story_metrics.csv": "9C8DF25ADE434CA0A7AB7D75704BFFCE288180ED1343BFE87E3BC0409C8AB8EB",
+      "aggregate_metrics.csv": "1BB6DF479D0DD7F4328E14411C8A665EBE810D2C77AD2B9D0B6D8DEA16666BD1",
+      "run_metadata.json": "5CBADD8F42B5062623B0DF2BCFFD4E17CB383F0A1EE54A233B76FA5AF9E86655"
+    }
+  },
+  "environment": {
+    "python_version": "3.12.8",
+    "platform": "Windows-11-10.0.22621-SP0",
+    "numpy_version": "1.26.4",
+    "pandas_version": "2.3.3"
+  },
+  "equivalence_methodology": {
+    "test": "Welch Two One-Sided Tests (TOST)",
+    "multiple_comparisons": "Holm-Bonferroni step-down",
+    "family_alpha": 0.05,
+    "effect_size": "Hedges' g",
+    "min_sample_size": 15,
+    "margins": [
+      {
+        "metric": "length_total_tokens",
+        "margin": 4.0,
+        "rationale": "10% of the [80, 120] token target window (canonical E6/E8 SD ~ 11.1-11.2 tokens)."
+      },
+      {
+        "metric": "repetition_repeated_bigram_rate",
+        "margin": 0.025,
+        "rationale": "2.5 percentage-point tolerance across [0, 1] scale (canonical E1-E8 span 0.006-0.660)."
+      },
+      {
+        "metric": "diversity_ttr",
+        "margin": 0.02,
+        "rationale": "0.020 TTR units (small vs canonical E5=0.221, E6=0.289, E8=0.678)."
+      },
+      {
+        "metric": "setting_setting_consistency_ratio",
+        "margin": 0.06,
+        "rationale": "6.0 percentage-point tolerance calibrated for canonical E6 SD=0.202 at N=200."
+      },
+      {
+        "metric": "action_dynamic_action_ratio",
+        "margin": 0.04,
+        "rationale": "4.0 percentage-point tolerance calibrated for canonical E8 SD=0.103 at N=200."
+      },
+      {
+        "metric": "character_character_continuity_ratio",
+        "margin": 0.09,
+        "rationale": "9.0 percentage-point tolerance (<0.29 SD of canonical E6 SD=0.312 at N=200; power limitation noted for high-variance continuity events)."
+      }
+    ]
+  },
+  "tost_comparison_count": 12,
+  "deterministic_results": {
+    "E1": {
+      "config_id": "E1",
+      "classification": "deterministic",
+      "verdict": "EXACT_REPRODUCTION",
+      "stories_compared": 200,
+      "failure_count": 0,
+      "exact_token_matches": 200,
+      "exact_text_matches": 200,
+      "exact_metric_matches": 200,
+      "sample_mismatches": [],
+      "note": "All 200/200 stories matched canonical tokens, text, seeds, and all non-timing metric values identically."
+    },
+    "E2": {
+      "config_id": "E2",
+      "classification": "deterministic",
+      "verdict": "EXACT_REPRODUCTION",
+      "stories_compared": 200,
+      "failure_count": 0,
+      "exact_token_matches": 200,
+      "exact_text_matches": 200,
+      "exact_metric_matches": 200,
+      "sample_mismatches": [],
+      "note": "All 200/200 stories matched canonical tokens, text, seeds, and all non-timing metric values identically."
+    },
+    "E3": {
+      "config_id": "E3",
+      "classification": "deterministic",
+      "verdict": "EXACT_REPRODUCTION",
+      "stories_compared": 200,
+      "failure_count": 0,
+      "exact_token_matches": 200,
+      "exact_text_matches": 200,
+      "exact_metric_matches": 200,
+      "sample_mismatches": [],
+      "note": "All 200/200 stories matched canonical tokens, text, seeds, and all non-timing metric values identically."
+    },
+    "E4": {
+      "config_id": "E4",
+      "classification": "deterministic",
+      "verdict": "EXACT_REPRODUCTION",
+      "stories_compared": 200,
+      "failure_count": 0,
+      "exact_token_matches": 200,
+      "exact_text_matches": 200,
+      "exact_metric_matches": 200,
+      "sample_mismatches": [],
+      "note": "All 200/200 stories matched canonical tokens, text, seeds, and all non-timing metric values identically."
+    },
+    "E5": {
+      "config_id": "E5",
+      "classification": "deterministic",
+      "verdict": "EXACT_REPRODUCTION",
+      "stories_compared": 200,
+      "failure_count": 0,
+      "exact_token_matches": 200,
+      "exact_text_matches": 200,
+      "exact_metric_matches": 200,
+      "sample_mismatches": [],
+      "note": "All 200/200 stories matched canonical tokens, text, seeds, and all non-timing metric values identically."
+    },
+    "E7": {
+      "config_id": "E7",
+      "classification": "deterministic",
+      "verdict": "EXACT_REPRODUCTION",
+      "stories_compared": 200,
+      "failure_count": 0,
+      "exact_token_matches": 200,
+      "exact_text_matches": 200,
+      "exact_metric_matches": 200,
+      "sample_mismatches": [],
+      "note": "All 200/200 stories matched canonical tokens, text, seeds, and all non-timing metric values identically."
+    }
+  },
+  "stochastic_results": {
+    "E6": {
+      "config_id": "E6",
+      "classification": "stochastic",
+      "verdict": "STATISTICAL_EQUIVALENCE",
+      "metrics_evaluated": 6,
+      "note": "All 6 pre-registered metrics passed Holm-adjusted TOST equivalence."
+    },
+    "E8": {
+      "config_id": "E8",
+      "classification": "stochastic",
+      "verdict": "STATISTICAL_EQUIVALENCE",
+      "metrics_evaluated": 6,
+      "note": "All 6 pre-registered metrics passed Holm-adjusted TOST equivalence."
+    }
+  },
+  "tost_tests": [
+    {
+      "config_id": "E6",
+      "metric": "length_total_tokens",
+      "n_canonical": 200,
+      "n_reproduced": 200,
+      "canonical_mean": 94.63,
+      "canonical_sd": 11.102677,
+      "reproduced_mean": 93.665,
+      "reproduced_sd": 10.523617,
+      "mean_diff": -0.965,
+      "se": 1.081702,
+      "welch_df": 396.86,
+      "hedges_g": -0.089043,
+      "t_diff": -0.8921,
+      "p_diff": 0.3728732684949472,
+      "margin": 4.0,
+      "t_lower": 2.8058,
+      "p_lower": 0.002633440775552054,
+      "t_upper": -4.59,
+      "p_upper": 2.978329207150275e-06,
+      "p_tost": 0.002633440775552054,
+      "ci_90_nominal": [
+        -2.748405,
+        0.818405
+      ],
+      "rationale": "10% of the [80, 120] token target window (canonical E6/E8 SD ~ 11.1-11.2 tokens).",
+      "status": "STATISTICAL_EQUIVALENCE",
+      "reason": "Holm-adjusted TOST p=0.01053 < 0.05; mean difference bounded strictly within [-4.0, +4.0].",
+      "p_tost_holm": 0.010533763102208216,
+      "ci_family_bonferroni": [
+        -3.833186,
+        1.903186
+      ],
+      "family_ci_level_pct": 99.17
+    },
+    {
+      "config_id": "E6",
+      "metric": "repetition_repeated_bigram_rate",
+      "n_canonical": 200,
+      "n_reproduced": 200,
+      "canonical_mean": 0.191694,
+      "canonical_sd": 0.047722,
+      "reproduced_mean": 0.191853,
+      "reproduced_sd": 0.042849,
+      "mean_diff": 0.000159,
+      "se": 0.004535,
+      "welch_df": 393.47,
+      "hedges_g": 0.003488,
+      "t_diff": 0.0349,
+      "p_diff": 0.9721375206785521,
+      "margin": 0.025,
+      "t_lower": 5.5475,
+      "p_lower": 2.664206655289547e-08,
+      "t_upper": -5.4776,
+      "p_upper": 3.852248819980883e-08,
+      "p_tost": 3.852248819980883e-08,
+      "ci_90_nominal": [
+        -0.007319,
+        0.007636
+      ],
+      "rationale": "2.5 percentage-point tolerance across [0, 1] scale (canonical E1-E8 span 0.006-0.660).",
+      "status": "STATISTICAL_EQUIVALENCE",
+      "reason": "Holm-adjusted TOST p=3.082e-07 < 0.05; mean difference bounded strictly within [-0.025, +0.025].",
+      "p_tost_holm": 3.081799055984706e-07,
+      "ci_family_bonferroni": [
+        -0.011866,
+        0.012184
+      ],
+      "family_ci_level_pct": 99.17
+    },
+    {
+      "config_id": "E6",
+      "metric": "diversity_ttr",
+      "n_canonical": 200,
+      "n_reproduced": 200,
+      "canonical_mean": 0.288814,
+      "canonical_sd": 0.044187,
+      "reproduced_mean": 0.286365,
+      "reproduced_sd": 0.03768,
+      "mean_diff": -0.00245,
+      "se": 0.004106,
+      "welch_df": 388.31,
+      "hedges_g": -0.059552,
+      "t_diff": -0.5966,
+      "p_diff": 0.5510894728118654,
+      "margin": 0.02,
+      "t_lower": 4.274,
+      "p_lower": 1.2095160345393374e-05,
+      "t_upper": -5.4673,
+      "p_upper": 4.097549273800027e-08,
+      "p_tost": 1.2095160345393374e-05,
+      "ci_90_nominal": [
+        -0.00922,
+        0.00432
+      ],
+      "rationale": "0.020 TTR units (small vs canonical E5=0.221, E6=0.289, E8=0.678).",
+      "status": "STATISTICAL_EQUIVALENCE",
+      "reason": "Holm-adjusted TOST p=8.467e-05 < 0.05; mean difference bounded strictly within [-0.02, +0.02].",
+      "p_tost_holm": 8.466612241775362e-05,
+      "ci_family_bonferroni": [
+        -0.013338,
+        0.008438
+      ],
+      "family_ci_level_pct": 99.17
+    },
+    {
+      "config_id": "E6",
+      "metric": "setting_setting_consistency_ratio",
+      "n_canonical": 200,
+      "n_reproduced": 200,
+      "canonical_mean": 0.73265,
+      "canonical_sd": 0.20215,
+      "reproduced_mean": 0.724462,
+      "reproduced_sd": 0.201198,
+      "mean_diff": -0.008188,
+      "se": 0.020167,
+      "welch_df": 397.99,
+      "hedges_g": -0.040526,
+      "t_diff": -0.406,
+      "p_diff": 0.6849416278656542,
+      "margin": 0.06,
+      "t_lower": 2.5691,
+      "p_lower": 0.0052803551016618044,
+      "t_upper": -3.3811,
+      "p_upper": 0.00039666907674123424,
+      "p_tost": 0.0052803551016618044,
+      "ci_90_nominal": [
+        -0.041438,
+        0.025061
+      ],
+      "rationale": "6.0 percentage-point tolerance calibrated for canonical E6 SD=0.202 at N=200.",
+      "status": "STATISTICAL_EQUIVALENCE",
+      "reason": "Holm-adjusted TOST p=0.01584 < 0.05; mean difference bounded strictly within [-0.06, +0.06].",
+      "p_tost_holm": 0.015841065304985413,
+      "ci_family_bonferroni": [
+        -0.061661,
+        0.045285
+      ],
+      "family_ci_level_pct": 99.17
+    },
+    {
+      "config_id": "E6",
+      "metric": "action_dynamic_action_ratio",
+      "n_canonical": 200,
+      "n_reproduced": 200,
+      "canonical_mean": 0.983065,
+      "canonical_sd": 0.021315,
+      "reproduced_mean": 0.98143,
+      "reproduced_sd": 0.019763,
+      "mean_diff": -0.001634,
+      "se": 0.002055,
+      "welch_df": 395.75,
+      "hedges_g": -0.079373,
+      "t_diff": -0.7952,
+      "p_diff": 0.4269582806678047,
+      "margin": 0.04,
+      "t_lower": 18.6658,
+      "p_lower": 0.0,
+      "t_upper": -20.2563,
+      "p_upper": 2.0616698176223422e-63,
+      "p_tost": 2.0616698176223422e-63,
+      "ci_90_nominal": [
+        -0.005023,
+        0.001754
+      ],
+      "rationale": "4.0 percentage-point tolerance calibrated for canonical E8 SD=0.103 at N=200.",
+      "status": "STATISTICAL_EQUIVALENCE",
+      "reason": "Holm-adjusted TOST p=2.268e-62 < 0.05; mean difference bounded strictly within [-0.04, +0.04].",
+      "p_tost_holm": 2.2678367993845763e-62,
+      "ci_family_bonferroni": [
+        -0.007083,
+        0.003815
+      ],
+      "family_ci_level_pct": 99.17
+    },
+    {
+      "config_id": "E6",
+      "metric": "character_character_continuity_ratio",
+      "n_canonical": 200,
+      "n_reproduced": 200,
+      "canonical_mean": 0.332085,
+      "canonical_sd": 0.311623,
+      "reproduced_mean": 0.353127,
+      "reproduced_sd": 0.319157,
+      "mean_diff": 0.021043,
+      "se": 0.031541,
+      "welch_df": 397.77,
+      "hedges_g": 0.066588,
+      "t_diff": 0.6671,
+      "p_diff": 0.5050680011106157,
+      "margin": 0.09,
+      "t_lower": 3.5205,
+      "p_lower": 0.0002402580549021316,
+      "t_upper": -2.1863,
+      "p_upper": 0.014689210240138419,
+      "p_tost": 0.014689210240138419,
+      "ci_90_nominal": [
+        -0.030959,
+        0.073044
+      ],
+      "rationale": "9.0 percentage-point tolerance (<0.29 SD of canonical E6 SD=0.312 at N=200; power limitation noted for high-variance continuity events).",
+      "status": "STATISTICAL_EQUIVALENCE",
+      "reason": "Holm-adjusted TOST p=0.02938 < 0.05; mean difference bounded strictly within [-0.09, +0.09].",
+      "p_tost_holm": 0.029378420480276838,
+      "ci_family_bonferroni": [
+        -0.062589,
+        0.104675
+      ],
+      "family_ci_level_pct": 99.17
+    },
+    {
+      "config_id": "E8",
+      "metric": "length_total_tokens",
+      "n_canonical": 200,
+      "n_reproduced": 200,
+      "canonical_mean": 104.265,
+      "canonical_sd": 11.243525,
+      "reproduced_mean": 102.47,
+      "reproduced_sd": 12.476676,
+      "mean_diff": -1.795,
+      "se": 1.187612,
+      "welch_df": 393.77,
+      "hedges_g": -0.150859,
+      "t_diff": -1.5114,
+      "p_diff": 0.13147928053393687,
+      "margin": 4.0,
+      "t_lower": 1.8567,
+      "p_lower": 0.03205255489107861,
+      "t_upper": -4.8795,
+      "p_upper": 7.735129301778741e-07,
+      "p_tost": 0.03205255489107861,
+      "ci_90_nominal": [
+        -3.753054,
+        0.163054
+      ],
+      "rationale": "10% of the [80, 120] token target window (canonical E6/E8 SD ~ 11.1-11.2 tokens).",
+      "status": "STATISTICAL_EQUIVALENCE",
+      "reason": "Holm-adjusted TOST p=0.03205 < 0.05; mean difference bounded strictly within [-4.0, +4.0].",
+      "p_tost_holm": 0.03205255489107861,
+      "ci_family_bonferroni": [
+        -4.944137,
+        1.354137
+      ],
+      "family_ci_level_pct": 99.17
+    },
+    {
+      "config_id": "E8",
+      "metric": "repetition_repeated_bigram_rate",
+      "n_canonical": 200,
+      "n_reproduced": 200,
+      "canonical_mean": 0.006122,
+      "canonical_sd": 0.008658,
+      "reproduced_mean": 0.00632,
+      "reproduced_sd": 0.008628,
+      "mean_diff": 0.000198,
+      "se": 0.000864,
+      "welch_df": 398.0,
+      "hedges_g": 0.022809,
+      "t_diff": 0.2285,
+      "p_diff": 0.8193613534126203,
+      "margin": 0.025,
+      "t_lower": 29.1548,
+      "p_lower": 0.0,
+      "t_upper": -28.6977,
+      "p_upper": 2.9302183456450252e-99,
+      "p_tost": 2.9302183456450252e-99,
+      "ci_90_nominal": [
+        -0.001227,
+        0.001622
+      ],
+      "rationale": "2.5 percentage-point tolerance across [0, 1] scale (canonical E1-E8 span 0.006-0.660).",
+      "status": "STATISTICAL_EQUIVALENCE",
+      "reason": "Holm-adjusted TOST p=3.516e-98 < 0.05; mean difference bounded strictly within [-0.025, +0.025].",
+      "p_tost_holm": 3.51626201477403e-98,
+      "ci_family_bonferroni": [
+        -0.002093,
+        0.002489
+      ],
+      "family_ci_level_pct": 99.17
+    },
+    {
+      "config_id": "E8",
+      "metric": "diversity_ttr",
+      "n_canonical": 200,
+      "n_reproduced": 200,
+      "canonical_mean": 0.678007,
+      "canonical_sd": 0.043126,
+      "reproduced_mean": 0.682922,
+      "reproduced_sd": 0.044642,
+      "mean_diff": 0.004915,
+      "se": 0.004389,
+      "welch_df": 397.53,
+      "hedges_g": 0.111784,
+      "t_diff": 1.12,
+      "p_diff": 0.26341023029182464,
+      "margin": 0.02,
+      "t_lower": 5.6768,
+      "p_lower": 1.3255804232059631e-08,
+      "t_upper": -3.4369,
+      "p_upper": 0.00032529114507882397,
+      "p_tost": 0.00032529114507882397,
+      "ci_90_nominal": [
+        -0.002321,
+        0.012152
+      ],
+      "rationale": "0.020 TTR units (small vs canonical E5=0.221, E6=0.289, E8=0.678).",
+      "status": "STATISTICAL_EQUIVALENCE",
+      "reason": "Holm-adjusted TOST p=0.001952 < 0.05; mean difference bounded strictly within [-0.02, +0.02].",
+      "p_tost_holm": 0.0019517468704729438,
+      "ci_family_bonferroni": [
+        -0.006723,
+        0.016553
+      ],
+      "family_ci_level_pct": 99.17
+    },
+    {
+      "config_id": "E8",
+      "metric": "setting_setting_consistency_ratio",
+      "n_canonical": 200,
+      "n_reproduced": 200,
+      "canonical_mean": 0.209521,
+      "canonical_sd": 0.054149,
+      "reproduced_mean": 0.214991,
+      "reproduced_sd": 0.062001,
+      "mean_diff": 0.005469,
+      "se": 0.005821,
+      "welch_df": 390.92,
+      "hedges_g": 0.09378,
+      "t_diff": 0.9396,
+      "p_diff": 0.34801844546674676,
+      "margin": 0.06,
+      "t_lower": 11.2475,
+      "p_lower": 0.0,
+      "t_upper": -9.3684,
+      "p_upper": 2.9842743876773335e-19,
+      "p_tost": 2.9842743876773335e-19,
+      "ci_90_nominal": [
+        -0.004128,
+        0.015066
+      ],
+      "rationale": "6.0 percentage-point tolerance calibrated for canonical E6 SD=0.202 at N=200.",
+      "status": "STATISTICAL_EQUIVALENCE",
+      "reason": "Holm-adjusted TOST p=2.686e-18 < 0.05; mean difference bounded strictly within [-0.06, +0.06].",
+      "p_tost_holm": 2.6858469489096e-18,
+      "ci_family_bonferroni": [
+        -0.009967,
+        0.020905
+      ],
+      "family_ci_level_pct": 99.17
+    },
+    {
+      "config_id": "E8",
+      "metric": "action_dynamic_action_ratio",
+      "n_canonical": 200,
+      "n_reproduced": 200,
+      "canonical_mean": 0.659623,
+      "canonical_sd": 0.10316,
+      "reproduced_mean": 0.654902,
+      "reproduced_sd": 0.102325,
+      "mean_diff": -0.004721,
+      "se": 0.010274,
+      "welch_df": 397.97,
+      "hedges_g": -0.045863,
+      "t_diff": -0.4595,
+      "p_diff": 0.64612926756825,
+      "margin": 0.04,
+      "t_lower": 3.4337,
+      "p_lower": 0.000328956609873865,
+      "t_upper": -4.3527,
+      "p_upper": 8.559198351885573e-06,
+      "p_tost": 0.000328956609873865,
+      "ci_90_nominal": [
+        -0.02166,
+        0.012218
+      ],
+      "rationale": "4.0 percentage-point tolerance calibrated for canonical E8 SD=0.103 at N=200.",
+      "status": "STATISTICAL_EQUIVALENCE",
+      "reason": "Holm-adjusted TOST p=0.001952 < 0.05; mean difference bounded strictly within [-0.04, +0.04].",
+      "p_tost_holm": 0.0019517468704729438,
+      "ci_family_bonferroni": [
+        -0.031963,
+        0.022521
+      ],
+      "family_ci_level_pct": 99.17
+    },
+    {
+      "config_id": "E8",
+      "metric": "character_character_continuity_ratio",
+      "n_canonical": 200,
+      "n_reproduced": 200,
+      "canonical_mean": 0.070992,
+      "canonical_sd": 0.080556,
+      "reproduced_mean": 0.073507,
+      "reproduced_sd": 0.082166,
+      "mean_diff": 0.002515,
+      "se": 0.008137,
+      "welch_df": 397.84,
+      "hedges_g": 0.030852,
+      "t_diff": 0.3091,
+      "p_diff": 0.7574070565643587,
+      "margin": 0.09,
+      "t_lower": 11.3703,
+      "p_lower": 0.0,
+      "t_upper": -10.7521,
+      "p_upper": 3.826485125571818e-24,
+      "p_tost": 3.826485125571818e-24,
+      "ci_90_nominal": [
+        -0.0109,
+        0.01593
+      ],
+      "rationale": "9.0 percentage-point tolerance (<0.29 SD of canonical E6 SD=0.312 at N=200; power limitation noted for high-variance continuity events).",
+      "status": "STATISTICAL_EQUIVALENCE",
+      "reason": "Holm-adjusted TOST p=3.826e-23 < 0.05; mean difference bounded strictly within [-0.09, +0.09].",
+      "p_tost_holm": 3.8264851255718184e-23,
+      "ci_family_bonferroni": [
+        -0.01906,
+        0.02409
+      ],
+      "family_ci_level_pct": 99.17
+    }
+  ],
+  "warnings": []
+}

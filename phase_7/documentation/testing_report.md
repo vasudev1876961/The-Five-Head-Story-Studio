@@ -22,7 +22,7 @@ Phase 7 introduced educational deliverables consisting of a complete Scratch 3.0
 
 ## 2. Scratch 3.0 Project Verification (`validate_sb3.py`)
 
-The verification script [validate_sb3.py](file:///c:/Users/vasud/OneDrive/Desktop/NLP-GAME-PROJECT/phase_7/scratch/validate_sb3.py) programmatically inspects the binary `.sb3` file without relying on manual browser uploads.
+The verification script [validate_sb3.py](../scratch/validate_sb3.py) programmatically inspects the binary `.sb3` file without relying on manual browser uploads.
 
 ### Test Execution Output
 
@@ -84,14 +84,12 @@ Command: pytest tests -q
 
 ---
 
-## 4. Platform & Runtime Compatibility
+## 4. Platform Specification Alignment & Verification Scope
 
-The generated `.sb3` archive was tested against the official Scratch specifications:
+The generated `.sb3` archive was structurally checked against the vanilla Scratch 3.0 schema and asset specifications via `validate_sb3.py`:
 
-1. **Scratch 3.0 Online Editor (scratch.mit.edu):** Loads cleanly via `File -> Load from your computer`. All 12 SVG costumes render with vector clarity and crisp typography.
-2. **Scratch Desktop 3.x (Offline):** Verified on Windows, macOS, and Linux desktop clients. No missing asset warnings or font fallback distortions.
-3. **Chromebooks & Tablet Browsers:** Pure vector SVG format and standard vanilla Scratch blocks ensure 60 FPS performance without WebGL extensions or external plugins.
-4. **Alternative Runtimes:** Compatible with TurboWarp and Phosphorus execution engines for high-speed compilation.
+1. **Structural Compliance:** Uses standard PKZIP packaging, vanilla Scratch 3.0 block opcodes (`meta.semver == "3.0.0"`), pure vector SVG assets with matching MD5 filenames, and zero experimental extensions so the archive conforms to Scratch 3.0 Web Editor and Scratch Desktop 3.x requirements.
+2. **Verification Scope Limitation:** Automated checks verify archive integrity, `project.json` schema, MD5 checksums, and mathematical weight/Hamilton invariants programmatically. Interactive loading and manual runtime execution in the Scratch Web Editor (`scratch.mit.edu`), Scratch Desktop, or Chromebook browsers were **not** executed automatically.
 
 ---
 

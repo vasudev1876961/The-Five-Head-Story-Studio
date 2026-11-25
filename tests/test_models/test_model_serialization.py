@@ -2,7 +2,6 @@
 
 import json
 import pytest
-from pathlib import Path
 
 from five_head_nlp.models.base_ngram import BaseNGramModel
 from five_head_nlp.models.unigram import UnigramModel
@@ -134,9 +133,9 @@ class TestModelSerialization:
         with pytest.raises(ValueError, match="Unknown model_type"):
             BaseNGramModel.load(unknown_type)
 
-    def test_serialization_to_experiments_models_directory(self, corpus_sentences):
-        """Verify saving directly to experiments/models/ as required by specification."""
-        dest_dir = Path("experiments/models")
+    def test_serialization_to_experiments_models_directory(self, corpus_sentences, tmp_path):
+        """Verify corpus model naming and persistence in an isolated temporary models directory."""
+        dest_dir = tmp_path / "experiments" / "models"
         dest_dir.mkdir(parents=True, exist_ok=True)
 
         for ModelCls in [UnigramModel, BigramModel, TrigramModel]:

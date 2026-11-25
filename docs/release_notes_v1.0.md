@@ -53,7 +53,7 @@ This release integrates all development phases into a standardized, installable 
 
 - **Total Unit & Integration Tests:** 319 passing tests in `tests/` across 8 sub-suites with 0 failures, 0 errors, and 0 skips.
 - **Decoding Compatibility Facade:** 2 passing unit tests in `tests/test_decoding/test_decoding_facade.py`.
-- **End-to-End Server Lifecycle Verification:** 8 passing scenario tests in `tests/test_ui/verify_studio_lifecycle.py`:
+- **End-to-End Server Lifecycle Verification:** 8 passing scenario tests in `tests/test_ui/test_studio_lifecycle.py` (originally authored as `verify_studio_lifecycle.py` in WP 8.5 and standardized to `test_studio_lifecycle.py` in Phase 9 WP9.1 for automatic discovery):
   - Scenario 1 (Normal Lifecycle): Startup HTTP 200, 3.0s observation, graceful control signal exit within timeout, port release.
   - Scenario 2 (Startup Timeout): Timeout detected, symmetrical graceful teardown executed, resources released.
   - Scenario 3 (Early Exit): Process exit code captured, exception-safe teardown.
@@ -64,16 +64,16 @@ This release integrates all development phases into a standardized, installable 
   - Scenario 8 (Post-Shutdown Port Hold): Bounded retry polling accurately detects lingering port occupation.
 - **Scratch Project Validation:** `validate_sb3.py` confirms 100% validity across all 12 targets, 4 monitors, 23 variables, 4 lists, and 12 asset MD5 checksums.
 - **Phase 5 Benchmark Consistency:** Exactly 1,600 JSONL records confirmed intact across 8 experimental conditions.
-- **Machine Path Scan:** Exactly 0 absolute machine paths exist across all `.py`, `.json`, and `.md` project files.
+- **Machine Path Scan:** Zero absolute machine paths exist across all tracked `.py` and `.json` files as well as current handover documentation (`README.md`, `docs/release_notes_v1.0.md`, `docs/developer_handbook.md`, `docs/academic_defense_runbook.md`, `docs/phase_5_experimental_methodology.md`, and `phase_7/documentation/testing_report.md`). *(Historical legacy Phase 2–8 design/planning `.md` snapshots outside those updated documents still retain local `file://` IDE hyperlinks.)*
 
 ---
 
 ## 5. Verified Boundaries & Documented Limitations
 
 ### Verified Boundaries
-- **Python Compatibility:** Tested and verified on Python 3.10, 3.11, and 3.12.
-- **Cross-Platform CLI Operation:** All console scripts execute identically from inside the repository and from remote working directories.
-- **Graceful Shutdown:** Streamlit server responds cleanly to OS interrupt signals (`CTRL_BREAK_EVENT` on Windows; `SIGTERM` on POSIX).
+- **Python Compatibility:** Runtime-verified locally on Python `3.12.8` (Windows 11). Python `3.10` and `3.11` are statically assessed against `requires-python = ">=3.10"` and configured in `.github/workflows/ci.yml` alongside `ubuntu-latest` and `macos-latest` targets (remote GitHub-hosted CI runs remain pending).
+- **CLI Operation:** All four console scripts execute locally on Windows both inside the repository and from unrelated working directories (`%TEMP%`).
+- **Graceful Shutdown:** Streamlit server responds cleanly to OS interrupt signals (`CTRL_BREAK_EVENT` on Windows runtime-verified; `SIGTERM` path implemented in `test_studio_lifecycle.py` for POSIX and awaiting GitHub-hosted Ubuntu/macOS runner execution).
 
 ### Documented Platform Limitations
 - **Windows Process Group Containment:** Without enclosing processes in a Windows Job Object (`JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE`), any untracked grandchild process that deliberately breaks away before `psutil` discovery enumeration could theoretically remain detached. For v1.0.0, Windows Job Objects are formally accepted as not required; multi-point `psutil` dynamic child tracking is the accepted standard.
